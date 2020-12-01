@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/iar"
+  to = "https://forms.gle/nvBai6qjzprhYmhp8"
+  status = 307
+  force = true
+
+[[redirects]]
+  from = "/iamremarkable"
+  to = "https://forms.gle/nvBai6qjzprhYmhp8"
+  status = 307
+  force = true
