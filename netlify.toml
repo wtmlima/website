@@ -1,16 +1,4 @@
 [[redirects]]
-  from = "/iar"
-  to = "https://forms.gle/nvBai6qjzprhYmhp8"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/iamremarkable"
-  to = "https://forms.gle/nvBai6qjzprhYmhp8"
-  status = 302
-  force = true
-
-[[redirects]]
   from = "/RoadToIWD"
   to = "https://forms.gle/oz9ucatgXPQtuDZV9"
   status = 302
