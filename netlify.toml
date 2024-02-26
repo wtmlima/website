@@ -9,3 +9,9 @@
   to = "https://gdg.community.dev/events/details/google-gdg-buenos-aires-presents-iwd-latam-2021-international-womens-day/#/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/iwd-2024/registro"
+  to = "https://lu.ma/iwd-lima-2024"
+  status = 302
+  force = true
