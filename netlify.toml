@@ -15,3 +15,11 @@
   to = "https://lu.ma/iwd-lima-2024"
   status = 302
   force = true
+
+
+[[redirects]]
+  from = "/iwd-2024/C4P"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSe9oT5xdMaV8BgKqYm3S5YZProENE72ZhyZJKEMVj36KwcedQ/viewform?usp=sf_link"
+  status = 302
+  force = true
+ 
