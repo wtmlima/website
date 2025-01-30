@@ -1,0 +1,292 @@
+:root {
+	--primary-dark: #2d344b;
+	--primary-blue: #2480f0;
+	--accent-gold: #e4c472;
+	--bg-light: #cae8ff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+	background-color: #20344b;
+	color: white;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+.nav {
+	padding: 1rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #165185b0;
+	backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+	height: 32px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: color 0.3s ease;
+	white-space: nowrap;
+}
+
+.nav-links a:hover {
+	color: var(--accent-gold);
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.hero {
+	padding: 6rem 0 3rem;
+	position: relative;
+}
+
+.hero-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.hero-text {
+	flex: 1;
+}
+
+.hero-image {
+	flex: 1;
+	text-align: center;
+}
+
+.hero-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 1rem;
+	object-fit: cover;
+}
+
+.hero-title {
+	font-size: clamp(2rem, 5vw, 4rem);
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+	color: var(--primary-blue);
+}
+
+.countdown-container {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	margin: 2rem auto;
+	width: 100%;
+	text-align: center;
+}
+
+.countdown-title {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	color: var(--primary-blue);
+}
+
+.countdown {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.countdown-item {
+	text-align: center;
+}
+
+.countdown-number {
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	color: var(--accent-gold);
+}
+
+.countdown-label {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.cta-button {
+	display: inline-block;
+	background: var(--accent-gold);
+	color: var(--primary-dark);
+	padding: 0.875rem 1.75rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 1.5rem;
+	transition: transform 0.3s ease;
+	text-align: center;
+}
+
+.cta-button:hover {
+	transform: translateY(-2px);
+}
+
+.section {
+	padding: 4rem 0;
+}
+
+.section-title {
+	font-size: clamp(1.75rem, 4vw, 2.5rem);
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.card {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card-title {
+	font-size: 1.25rem;
+	margin-bottom: 0.875rem;
+	color: var(--primary-blue);
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	margin: 2rem 0;
+}
+
+.social-links a {
+	color: var(--accent-gold);
+	transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+	transform: translateY(-2px);
+}
+
+footer {
+	padding: 3rem 0;
+	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+	padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.nav {
+		padding: 0.75rem 1rem;
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	.nav-links {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		background: #165185;
+		padding: 1rem;
+		text-align: center;
+	}
+
+	.nav-links.active {
+		display: flex;
+	}
+
+	.nav-links a {
+		padding: 0.75rem 0;
+	}
+
+	.hero-content {
+		flex-direction: column-reverse;
+	}
+
+	.hero-text {
+		text-align: center;
+	}
+
+	.countdown {
+		gap: 0.5rem;
+	}
+
+	.countdown-number {
+		font-size: 1.75rem;
+	}
+
+	.countdown-label {
+		font-size: 0.7rem;
+	}
+
+	.card {
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0 0.75rem;
+	}
+
+	.hero {
+		padding: 5rem 0 2rem;
+	}
+
+	.countdown-container {
+		padding: 1rem;
+	}
+
+	.section {
+		padding: 3rem 0;
+	}
+}
