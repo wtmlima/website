@@ -16,10 +16,20 @@
   status = 302
   force = true
 
-
 [[redirects]]
   from = "/iwd-2024/C4P"
   to = "https://docs.google.com/forms/d/e/1FAIpQLSe9oT5xdMaV8BgKqYm3S5YZProENE72ZhyZJKEMVj36KwcedQ/viewform?usp=sf_link"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/iwd-2025/registro"
+  to = "https://lu.ma/d298qbu6"
+  status = 302
+  force = true
  
+[[redirects]]
+  from = "/iwd-2025/C4P"
+  to = "https://sessionize.com/iwd-lima-2025/"
+  status = 302
+  force = true
