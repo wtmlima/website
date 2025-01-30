@@ -217,6 +217,9 @@ footer {
 	display: none;
 	cursor: pointer;
 	padding: 0.5rem;
+	background: none;
+	border: none;
+	color: white;
 }
 
 @media (max-width: 768px) {
@@ -230,14 +233,16 @@ footer {
 
 	.nav-links {
 		display: none;
-		position: absolute;
-		top: 100%;
+		position: fixed;
+		top: 60px;
+		/* Altura del nav */
 		left: 0;
 		right: 0;
 		flex-direction: column;
 		background: #165185;
 		padding: 1rem;
 		text-align: center;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	.nav-links.active {
@@ -246,6 +251,8 @@ footer {
 
 	.nav-links a {
 		padding: 0.75rem 0;
+		display: block;
+		width: 100%;
 	}
 
 	.hero-content {
