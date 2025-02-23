@@ -92,3 +92,149 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 });
+
+document.addEventListener('DOMContentLoaded', async function () {
+	try {
+		const response = await fetch('assets/data/iwd-2025.json');
+		const data = await response.json();
+
+		renderSpeakers(data.speakers);
+		renderAmbassadors(data.ambassadors);
+		renderSponsors(data.sponsors);
+	} catch (error) {
+		console.error('Error loading JSON:', error);
+	}
+});
+
+function renderSpeakers(speakers) {
+	const container = document.querySelector('.speakers-list');
+	container.innerHTML = '';
+
+	speakers.forEach((speaker) => {
+		const speakerHTML = `
+        <div class="speaker-card">
+            <div class="speaker-frame">
+                <img class="speaker-border" src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png" alt="Speaker Border">
+                <img class="speaker-photo" src="${speaker.image}" alt="${
+			speaker.name
+		}">
+            </div>
+            <h3>${speaker.name}</h3>
+            <p>${speaker.role}</p>
+            ${
+							speaker.linkedin
+								? `<a href="${speaker.linkedin}" target="_blank" class="linkedin-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20">
+            </a>`
+								: ''
+						}
+        </div>
+        `;
+		container.innerHTML += speakerHTML;
+	});
+}
+
+function renderAmbassadors(ambassadors) {
+	const container = document.querySelector('.ambassadors-list');
+	container.innerHTML = '';
+
+	ambassadors.forEach((ambassador) => {
+		const ambassadorHTML = `
+		<div class="ambassador-card">
+			<div class="ambassador-frame">
+				<div class="ambassador-border"></div>
+				<img class="ambassador-photo" src="${ambassador.image}" alt="${ambassador.name}">
+			</div>
+			<h3>${ambassador.name}</h3>
+			<p>${ambassador.role}</p>
+			<a href="${ambassador.linkedin}" target="_blank">
+				<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20">
+			</a>
+		</div>
+		`;
+		container.innerHTML += ambassadorHTML;
+	});
+}
+
+function renderSponsors(sponsors) {
+	const container = document.querySelector('#sponsors-content');
+	container.innerHTML = '';
+
+	const plans = {
+		'ada-lovelace': 'Plan Ada Lovelace',
+		'grace-hopper': 'Plan Grace Hopper',
+		'margaret-hamilton': 'Plan Margaret Hamilton',
+	};
+
+	Object.keys(plans).forEach((planKey) => {
+		if (sponsors[planKey] && sponsors[planKey].length > 0) {
+			let planHTML = `
+            <div class="sponsor-category ${planKey}">
+                <h3 class="sponsor-tier">${plans[planKey]}</h3>
+                <div class="sponsor-logos">
+            `;
+
+			sponsors[planKey].forEach((sponsor) => {
+				planHTML += `
+                <div class="sponsor-item">
+                    <a href="${sponsor.website}" target="_blank">
+                        <img src="${sponsor.logo}" alt="${sponsor.name}">
+                        <span class="sponsor-name">${sponsor.name}</span>
+                    </a>
+                </div>
+                `;
+			});
+
+			planHTML += `</div></div>`;
+			container.innerHTML += planHTML;
+		}
+	});
+
+	container.innerHTML += `<div class="sponsors-divider"></div>`;
+
+	if (sponsors['hedy-lamarr'] && sponsors['hedy-lamarr'].length > 0) {
+		let communityHTML = `
+        <div class="sponsor-category hedy-lamarr">
+            <h3 class="sponsor-tier">Hedy Lamarr</h3>
+            <p class="sponsor-description">Apoyo de Comunidades Sin Fines de Lucro</p>
+            <div class="sponsor-logos">
+        `;
+
+		sponsors['hedy-lamarr'].forEach((community) => {
+			communityHTML += `
+            <div class="sponsor-item">
+                <a href="${community.website}" target="_blank">
+                    <img src="${community.logo}" alt="${community.name}">
+                    <span class="sponsor-name">${community.name}</span>
+                </a>
+            </div>
+            `;
+		});
+
+		communityHTML += `</div></div>`;
+		container.innerHTML += communityHTML;
+	}
+
+	if (sponsors['carol-shaw'] && sponsors['carol-shaw'].length > 0) {
+		let individualHTML = `
+        <div class="sponsor-category carol-shaw">
+            <h3 class="sponsor-tier">Carol Shaw</h3>
+            <p class="sponsor-description">Apoyo Individual</p>
+            <div class="sponsor-logos">
+        `;
+
+		sponsors['carol-shaw'].forEach((individual) => {
+			individualHTML += `
+            <div class="sponsor-item">
+                <a href="${individual.website}" target="_blank">
+                    <img src="${individual.logo}" alt="${individual.name}">
+                    <span class="sponsor-name">${individual.name}</span>
+                </a>
+            </div>
+            `;
+		});
+
+		individualHTML += `</div></div>`;
+		container.innerHTML += individualHTML;
+	}
+}

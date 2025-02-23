@@ -379,11 +379,9 @@ section {
 .speaker-card {
 	text-align: center;
 	max-width: 250px;
-}
-
-.speaker-photo {
-	width: 100%;
-	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .speaker-card h3 {
@@ -397,6 +395,45 @@ section {
 	font-size: 1rem;
 	font-weight: 400;
 	color: var(--text-color);
+}
+
+.speaker-frame {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.speaker-frame::before {
+	content: '';
+	background: url('https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png')
+		no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+}
+
+.speaker-border {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	border-radius: 50%;
+}
+
+.speaker-photo {
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	object-fit: cover;
+	border-radius: 50%;
+	z-index: 1;
 }
 
 /* --------------------------------- */
@@ -417,7 +454,7 @@ section {
 	position: relative;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	min-height: 500px;
+	min-height: 900px;
 }
 
 .ambassadors-title {
@@ -459,6 +496,39 @@ section {
 	color: var(--text-color);
 }
 
+.ambassador-frame {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.ambassador-frame::before {
+	content: '';
+	background: url('https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png')
+		no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+.ambassador-photo {
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	object-fit: cover;
+	border-radius: 50%;
+	z-index: 1;
+}
+
 /* Decorative Illustration */
 .ambassadors-illustration {
 	position: absolute;
@@ -467,7 +537,9 @@ section {
 	width: 130px;
 }
 
+/* --------------------------------- */
 /* Sponsors Section */
+/* --------------------------------- */
 .sponsors {
 	width: 100%;
 	position: relative;
@@ -481,6 +553,7 @@ section {
 .sponsors-container {
 	max-width: 1200px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 .sponsors-title {
@@ -488,6 +561,13 @@ section {
 	font-weight: 700;
 	color: #202124;
 	margin-bottom: 3rem;
+}
+
+.sponsor-name {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #202124;
+	margin-top: 0.5rem;
 }
 
 /* Sponsor Categories */
@@ -519,17 +599,72 @@ section {
 .sponsor-logos {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 2rem;
 	flex-wrap: wrap;
+	text-align: center;
 }
 
 .sponsor-logos img {
 	display: block;
 	transition: transform 0.3s ease-in-out;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+.sponsor-logos a {
+	text-decoration: none;
+}
+
+.sponsor-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.sponsor-item a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+}
+
+.sponsor-name {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #202124;
+	margin-top: 0.5rem;
 }
 
 .sponsor-logos img:hover {
 	transform: scale(1.05);
+}
+
+.ada-lovelace .sponsor-logos img {
+	max-width: 250px;
+	max-height: 100px;
+}
+
+.grace-hopper .sponsor-logos img {
+	max-width: 200px;
+	max-height: 80px;
+}
+
+.margaret-hamilton .sponsor-logos img {
+	max-width: 150px;
+	max-height: 60px;
+}
+
+.hedy-lamarr .sponsor-logos img {
+	max-width: 120px;
+	max-height: 50px;
+}
+
+.carol-shaw .sponsor-logos img {
+	max-width: 100px;
+	max-height: 40px;
 }
 
 /* Divider */
@@ -577,6 +712,14 @@ section {
 	border: none;
 }
 
+.agenda-message {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #20344b;
+	text-align: center;
+	margin-top: 1rem;
+}
+
 /* -------------------------- */
 /* Responsive Design */
 /* -------------------------- */
@@ -608,21 +751,62 @@ section {
 		display: flex;
 	}
 
+	/* Hero Section */
 	.hero {
+		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 6rem 2rem 3rem;
+		margin: 0 auto;
+		max-width: 90%;
+	}
+
+	.hero h1 {
+		font-size: 70px;
+		word-break: break-word;
+		margin: 0 auto 1rem;
+		padding: 0 1rem;
 		text-align: center;
 	}
 
+	.hero p {
+		font-size: 1.2rem;
+		line-height: 1.5;
+		margin-bottom: 20px;
+		padding: 0 1rem;
+		text-align: center;
+	}
+
+	.hero-content {
+		width: 100%;
+		max-width: 600px;
+	}
+
 	.hero-photo {
-		width: 300px;
-		height: 300px;
+		width: 80%;
+		max-width: 350px;
+		height: auto;
 		object-fit: contain;
+		margin-bottom: 2rem;
 	}
 
 	.hero-arrow {
 		display: none;
 	}
 
+	/* CTA Button */
+	.cta-button {
+		width: 100%;
+		max-width: 320px;
+		text-align: center;
+		padding: 1rem;
+		font-size: 1.2rem;
+		border-radius: 8px;
+	}
+
+	/* Stats */
 	.stats {
 		display: flex;
 		flex-direction: column;
@@ -636,6 +820,7 @@ section {
 		width: 100%;
 	}
 
+	/* Speakers */
 	.speakers-list {
 		flex-direction: column;
 		align-items: center;
@@ -656,21 +841,22 @@ section {
 	}
 
 	.speakers-container {
-		min-height: 1400px;
+		min-height: 700px;
 	}
 
 	.speakers-girl {
 		width: 120px;
-		bottom: -50px;
+		bottom: -96px;
 	}
 
+	/* Ambassadors */
 	.ambassadors-list {
 		flex-direction: column;
 		align-items: center;
 	}
 
 	.ambassadors-container {
-		min-height: 1200px;
+		min-height: 3070px;
 	}
 
 	.ambassadors-illustration {
@@ -680,6 +866,7 @@ section {
 		bottom: -80px;
 	}
 
+	/* Sponsors */
 	.sponsors-title {
 		font-size: 2rem;
 	}
@@ -689,6 +876,16 @@ section {
 	}
 
 	.sponsor-logos {
+		gap: 1rem;
+	}
+
+	.sponsor-category.hedy-lamarr {
+		text-align: center;
+	}
+
+	.sponsor-category.hedy-lamarr .sponsor-logos {
+		flex-direction: column;
+		align-items: center;
 		gap: 1rem;
 	}
 }
@@ -770,4 +967,14 @@ section {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+.speaker-photo,
+.ambassador-photo {
+	width: 70%;
+	height: 70%;
+	object-fit: cover;
+	border-radius: 50%;
+	max-width: 175px;
+	max-height: 175px;
 }

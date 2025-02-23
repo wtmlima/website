@@ -149,43 +149,14 @@
 						<div class="date-content">
 							<p>Save the date!</p>
 							<p class="date">22/03/25</p>
-							<!-- <p class="hashtag">#WTMredefinePossible</p> -->
 						</div>
 					</div>
 
 					<!-- Decorative elements -->
 					<div class="stars-container" data-color="#1a5745"></div>
 
-					<!-- Speakers List -->
-					<div class="speakers-list">
-						<div class="speaker-card">
-							<img
-								class="speaker-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Speaker 1"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Rol @ Empresa</p>
-						</div>
-						<div class="speaker-card">
-							<img
-								class="speaker-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Speaker 2"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Rol @ Empresa</p>
-						</div>
-						<div class="speaker-card">
-							<img
-								class="speaker-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Speaker 3"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Rol @ Empresa</p>
-						</div>
-					</div>
+					<!-- Dynamic Speakers List -->
+					<div class="speakers-list"></div>
 
 					<img
 						class="speakers-girl"
@@ -203,36 +174,8 @@
 					<!-- Decorative elements -->
 					<div class="stars-container" data-color="#165185"></div>
 
-					<!-- Ambassadors List -->
-					<div class="ambassadors-list">
-						<div class="ambassador-card">
-							<img
-								class="ambassador-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Ambassador 1"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Descripción</p>
-						</div>
-						<div class="ambassador-card">
-							<img
-								class="ambassador-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Ambassador 2"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Descripción</p>
-						</div>
-						<div class="ambassador-card">
-							<img
-								class="ambassador-photo"
-								src="https://i.ibb.co/NdmjzHw0/bg-speakers-iwd-2025.png"
-								alt="Ambassador 3"
-							/>
-							<h3>Nombre Apellido</h3>
-							<p>Descripción</p>
-						</div>
-					</div>
+					<!-- Dynamic Ambassadors List -->
+					<div class="ambassadors-list"></div>
 
 					<!-- Decorative Illustration -->
 					<img
@@ -247,87 +190,9 @@
 			<section id="sponsors" class="sponsors">
 				<div class="sponsors-container">
 					<h2 class="sponsors-title">Sponsors</h2>
-
 					<!-- Decorative elements -->
 					<div class="stars-container" data-color="#fff"></div>
-
-					<!-- Ada Lovelace Plan (Mayor aporte) -->
-					<div class="sponsor-category ada-lovelace">
-						<h3 class="sponsor-tier">Plan Ada Lovelace</h3>
-						<div class="sponsor-logos">
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/250x100" alt="Sponsor 1"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/250x100" alt="Sponsor 2"
-							/></a>
-						</div>
-					</div>
-
-					<!-- Grace Hopper Plan -->
-					<div class="sponsor-category grace-hopper">
-						<h3 class="sponsor-tier">Plan Grace Hopper</h3>
-						<div class="sponsor-logos">
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/200x80" alt="Sponsor 3"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/200x80" alt="Sponsor 4"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/200x80" alt="Sponsor 5"
-							/></a>
-						</div>
-					</div>
-
-					<!-- Margaret Hamilton Plan -->
-					<div class="sponsor-category margaret-hamilton">
-						<h3 class="sponsor-tier">Plan Margaret Hamilton</h3>
-						<div class="sponsor-logos">
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/150x60" alt="Sponsor 6"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/150x60" alt="Sponsor 7"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/150x60" alt="Sponsor 8"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/150x60" alt="Sponsor 9"
-							/></a>
-						</div>
-					</div>
-
-					<!-- Divider -->
-					<div class="sponsors-divider"></div>
-
-					<!-- Hedy Lamarr Plan - Community Support -->
-					<div class="sponsor-category hedy-lamarr">
-						<h3 class="sponsor-tier">Hedy Lamarr</h3>
-						<p class="sponsor-description">
-							Apoyo de Comunidades Sin Fines de Lucro
-						</p>
-						<div class="sponsor-logos">
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/120x50" alt="Community 1"
-							/></a>
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/120x50" alt="Community 2"
-							/></a>
-						</div>
-					</div>
-
-					<!-- Carol Shaw Plan - Individual Support -->
-					<div class="sponsor-category carol-shaw">
-						<h3 class="sponsor-tier">Carol Shaw</h3>
-						<p class="sponsor-description">Apoyo Individual</p>
-						<div class="sponsor-logos">
-							<a href="#" target="_blank"
-								><img src="https://placehold.co/100x40" alt="Individual 1"
-							/></a>
-						</div>
-					</div>
+					<div id="sponsors-content"></div>
 				</div>
 			</section>
 
@@ -335,10 +200,16 @@
 			<section id="agenda" class="agenda">
 				<div class="agenda-container">
 					<h2 class="agenda-title">Agenda</h2>
-					<script
+					<p class="agenda-message">
+						¡Pronto revelaremos la agenda! Mantente atento a las
+						actualizaciones.
+					</p>
+
+					<!--Uncomment once the agenda is ready -->
+					<!-- <script
 						type="text/javascript"
 						src="https://sessionize.com/api/v2/sycgcz4m/view/GridSmart"
-					></script>
+					></script> -->
 				</div>
 			</section>
 		</main>
