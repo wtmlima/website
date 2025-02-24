@@ -55,6 +55,48 @@
 			"role": "WTM Ambassador",
 			"image": "./assets/images/ambassadors/alanis-gonzales.jpg",
 			"linkedin": "https://www.linkedin.com/in/alanisgonzalez"
+		},
+		{
+			"name": "Rihana Avila",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/rihana-avila.jpg",
+			"linkedin": "https://www.linkedin.com/in/rihana-avila/"
+		},
+		{
+			"name": "Edith Canelo",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/edith-canelo.jpg",
+			"linkedin": "https://www.linkedin.com/in/edith-canelo"
+		},
+		{
+			"name": "Melissa Gave",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/melissa-gave.jpg",
+			"linkedin": "https://www.linkedin.com/in/melissagavemq"
+		},
+		{
+			"name": "Wendy Morales",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/wendy-morales.jpg",
+			"linkedin": "https://www.linkedin.com/in/wmoralesy"
+		},
+		{
+			"name": "Jackelin Salazar",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/jackelin-salazar.jpg",
+			"linkedin": "https://www.linkedin.com/in/jackelinsalazar"
+		},
+		{
+			"name": "Geraldin Santos",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/geraldin-santos.jpg",
+			"linkedin": "https://www.linkedin.com/in/geraldinsantos"
+		},
+		{
+			"name": "Glisse Jorge",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/glisse-jorge.jpg",
+			"linkedin": "https://www.linkedin.com/in/alanisgonzalez"
 		}
 	],
 	"sponsors": {
