@@ -277,7 +277,6 @@ section {
 .speakers {
 	width: 100%;
 	position: relative;
-	left: calc(-50vw + 50%);
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 	background-color: #d1ece3;
@@ -443,7 +442,6 @@ section {
 .ambassadors {
 	width: 100%;
 	position: relative;
-	left: calc(-50vw + 50%);
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 	background-color: #c5ddf8;
@@ -859,7 +857,7 @@ section {
 	.speakers-arrow {
 		display: none;
 	}
-	
+
 	.speakers-container {
 		min-height: 700px;
 	}
