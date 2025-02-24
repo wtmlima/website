@@ -369,6 +369,7 @@ section {
 
 /* Speaker Button */
 .speakers-button {
+	position: relative;
 	display: block;
 	width: 100%;
 	margin: 20px auto;
