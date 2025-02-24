@@ -858,6 +858,7 @@ section {
 	.speakers-arrow {
 		display: none;
 	}
+	
 	.speakers-container {
 		min-height: 700px;
 	}
