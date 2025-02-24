@@ -1,0 +1,123 @@
+{
+	"speakers": [
+		{
+			"name": "¡Falta poco!",
+			"role": "Pronto conocerás a nuestras increíbles speakers",
+			"image": "./assets/images/speakers/speaker-shape.jpeg",
+			"linkedin": ""
+		}
+	],
+	"ambassadors": [
+		{
+			"name": "Kattya Cuevas",
+			"role": "Ruby Peru organizer",
+			"image": "./assets/images/ambassadors/kattya-cuevas.jpeg",
+			"linkedin": "https://www.linkedin.com/in/KattyaCuevas/"
+		},
+		{
+			"name": "Katherine Chauca",
+			"role": "GDG Cloud Lima Organizer",
+			"image": "./assets/images/ambassadors/katherine-chauca.jpeg",
+			"linkedin": "https://www.linkedin.com/in/katherinechauca/"
+		},
+		{
+			"name": "Marcelim Rondon",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/marcelim-rondon.jpeg",
+			"linkedin": "https://www.linkedin.com/in/marcelim-rondon/"
+		},
+		{
+			"name": "Alejandra Gómez",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/alejandra-gomez.jpg",
+			"linkedin": "https://www.linkedin.com/in/alejandragomezcasani/"
+		},
+		{
+			"name": "Julissa Rodriguez",
+			"role": "Perú .NET Development Organizer",
+			"image": "./assets/images/ambassadors/julissa-rodriguez.jpeg",
+			"linkedin": "https://www.linkedin.com/in/julissarodriguezparco/"
+		},
+		{
+			"name": "Yovany Romero",
+			"role": "Data Growth Community",
+			"image": "./assets/images/ambassadors/yovany-romero.jpg",
+			"linkedin": "https://www.linkedin.com/in/printxiomara/"
+		},
+		{
+			"name": "Victoria Ubaldo",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/victoria-ubaldo.jpeg",
+			"linkedin": "https://www.linkedin.com/in/victoriaubaldo"
+		},
+		{
+			"name": "Rihana Avila",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/rihana-avila.jpg",
+			"linkedin": "https://www.linkedin.com/in/rihana-avila/"
+		},
+		{
+			"name": "Melissa Gave",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/melissa-gave.jpg",
+			"linkedin": "https://www.linkedin.com/in/melissagavemq"
+		},
+		{
+			"name": "Jackelin Salazar",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/jackelin-salazar.jpg",
+			"linkedin": "https://www.linkedin.com/in/jackelinsalazar"
+		},
+		{
+			"name": "Glisse Jorge",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/glisse-jorge.jpg",
+			"linkedin": "https://www.linkedin.com/in/alanisgonzalez"
+		}
+	],
+	"sponsors": {
+		"ada-lovelace": [
+			{
+				"name": "Data Science Research Perú",
+				"logo": "https://www.datascience.pe/assets/img/logo.png",
+				"website": "https://www.datascience.pe/"
+			}
+		],
+		"grace-hopper": [
+			{
+				"name": "Encora",
+				"logo": "./assets/images/sponsors/encora-logo-black.png",
+				"website": "https://careers.encora.com/es/country/peru?utm=wtmlima"
+			}
+		],
+		"margaret-hamilton": [],
+		"hedy-lamarr": [
+			{
+				"name": "Perú .NET Development",
+				"logo": "./assets/images/communities/perunetdev.png",
+				"website": "https://www.instagram.com/perunetdev"
+			},
+			{
+				"name": "GDG Cloud Lima",
+				"logo": "./assets/images/communities/gdg-cloud-lima.png",
+				"website": "https://gdg.community.dev/gdg-cloud-lima/"
+			},
+			{
+				"name": "IEEE Women in Engineering Perú",
+				"logo": "./assets/images/communities/ieee_peru_wie_rgb_purple.png",
+				"website": "https://bit.ly/41Xd9hi"
+			},
+			{
+				"name": "Peruvians In STEM",
+				"logo": "./assets/images/communities/peruvian-in-stem.png",
+				"website": "https://www.instagram.com/peruviansinstem/"
+			},
+			{
+				"name": "IEEE CS Untels",
+				"logo": "./assets/images/communities/ieee_untels_cs_rgb_pp_c.png",
+				"website": "https://www.instagram.com/ieee.cs.untels/"
+			}
+		],
+		"carol-shaw": []
+	}
+}
