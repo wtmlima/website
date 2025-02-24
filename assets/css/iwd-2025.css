@@ -798,7 +798,9 @@ section {
 
 	/* CTA Button */
 	.cta-button {
+		display: block;
 		width: 100%;
+		margin: 0 auto;
 		max-width: 320px;
 		text-align: center;
 		padding: 1rem;
@@ -828,9 +830,9 @@ section {
 
 	.save-the-date {
 		position: relative;
-		right: 12%;
+		right: -42%;
 		transform: translateX(50%) rotate(-5deg);
-		top: 20px;
+		top: -124px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -862,7 +864,7 @@ section {
 	.ambassadors-illustration {
 		right: 50%;
 		transform: translateX(50%);
-		width: 140px;
+		width: 75px;
 		bottom: -80px;
 	}
 
@@ -887,6 +889,11 @@ section {
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
+	}
+
+	.hedy-lamarr .sponsor-logos img {
+		max-width: 250px;
+		max-height: 70px;
 	}
 }
 
