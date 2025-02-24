@@ -765,7 +765,7 @@ section {
 	}
 
 	.hero h1 {
-		font-size: 70px;
+		font-size: 68px;
 		word-break: break-word;
 		margin: 0 auto 1rem;
 		padding: 0 1rem;
@@ -844,18 +844,22 @@ section {
 
 	.save-the-date {
 		position: relative;
-		right: -42%;
 		transform: translateX(50%) rotate(-5deg);
-		top: -124px;
+		top: 15px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		z-index: 10;
 	}
 
 	.save-the-date img.cloud-bg {
 		width: 250px;
 	}
 
+	.speakers-arrow {
+		display: none;
+	}
+	
 	.speakers-container {
 		min-height: 700px;
 	}
