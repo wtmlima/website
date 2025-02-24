@@ -278,7 +278,7 @@ section {
 	width: 100%;
 	position: relative;
 	padding-top: 6rem;
-	padding-bottom: 6rem;
+	padding-bottom: 9rem; /* padding-bottom: 6rem; */
 	background-color: #d1ece3;
 	overflow: hidden;
 }
@@ -308,7 +308,7 @@ section {
 
 .speakers-girl {
 	position: absolute;
-	bottom: -97px;
+	bottom: -220px; /* bottom: -97px; */
 	left: 50%;
 	transform: translateX(-50%);
 	width: 180px;
@@ -365,6 +365,23 @@ section {
 	color: #00b698;
 	font-size: 1.8rem;
 	font-weight: 700;
+}
+
+/* Speaker Button */
+.speakers-button {
+	display: block;
+	width: 100%;
+	margin: 20px auto;
+	max-width: 320px;
+	text-align: center;
+	background-color: var(--primary-green);
+	padding: 1rem;
+	font-size: 1.2rem;
+	border-radius: 8px;
+}
+
+.speakers-button:hover {
+	background-color: #0F7C67;
 }
 
 /* Speaker Cards */
@@ -864,7 +881,7 @@ section {
 
 	.speakers-girl {
 		width: 120px;
-		bottom: -96px;
+		bottom: -175px; /* bottom: -96px; */
 	}
 
 	/* Ambassadors */
