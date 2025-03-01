@@ -1,6 +1,24 @@
 {
 	"speakers": [
 		{
+			"name": "Aurea Soriano-Vargas",
+			"role": "AI Research Scientist and Professor @UTEC",
+			"image": "./assets/images/speakers/aurea-soriano-vargas.jpg",
+			"linkedin": "https://pe.linkedin.com/in/aureasoriano"
+		},
+		{
+			"name": "Gera Flores Sempertegui",
+			"role": "Data & Analytics Manager @MediaLabTech and Professor",
+			"image": "./assets/images/speakers/gera-flores-sempertegui.jpg",
+			"linkedin": "https://www.linkedin.com/in/gflores1092/"
+		},
+		{
+			"name": "Lesly Zerna",
+			"role": "Curriculum Developer @DeepLearningAi and GDE Machine Learning",
+			"image": "./assets/images/speakers/lesly-zerna.jpeg",
+			"linkedin": "https://www.linkedin.com/in/lesly-zerna/"
+		},
+		{
 			"name": "¿Te animas a ser speaker?",
 			"role": "¡Anímate y sé parte de nuestras increíbles speakers!",
 			"image": "./assets/images/speakers/speaker-shape.jpeg",
