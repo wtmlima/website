@@ -1,10 +1,22 @@
 {
 	"speakers": [
 		{
-			"name": "¿Te animas a ser speaker?",
-			"role": "¡Anímate y sé parte de nuestras increíbles speakers!",
-			"image": "./assets/images/speakers/speaker-shape.jpeg",
-			"linkedin": ""
+			"name": "Aurea Soriano-Vargas",
+			"role": "AI Research Scientist and Professor @UTEC",
+			"image": "./assets/images/speakers/aurea-soriano-vargas.jpg",
+			"linkedin": "https://pe.linkedin.com/in/aureasoriano"
+		},
+		{
+			"name": "Gera Flores Sempertegui",
+			"role": "Data & Analytics Manager @MediaLabTech and Professor",
+			"image": "./assets/images/speakers/gera-flores-sempertegui.jpg",
+			"linkedin": "https://www.linkedin.com/in/gflores1092/"
+		},
+		{
+			"name": "Lesly Zerna",
+			"role": "Curriculum Developer @DeepLearningAi and GDE Machine Learning",
+			"image": "./assets/images/speakers/lesly-zerna.jpeg",
+			"linkedin": "https://www.linkedin.com/in/lesly-zerna/"
 		}
 	],
 	"ambassadors": [
@@ -80,7 +92,12 @@
 			{
 				"name": "Data Science Research Perú",
 				"logo": "https://www.datascience.pe/assets/img/logo.png",
-				"website": "https://www.datascience.pe/"
+				"website": "https://www.datascience.pe?utm=iwdlima"
+			},
+			{
+				"name": "Haystack News",
+				"logo": "./assets/images/sponsors/hn-backgrounds-black.png",
+				"website": "https://www.haystack.tv?utm=wtmlima"
 			}
 		],
 		"grace-hopper": [
