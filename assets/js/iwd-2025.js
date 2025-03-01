@@ -187,6 +187,10 @@ function renderSponsors(sponsors) {
 
 			planHTML += `</div></div>`;
 			container.innerHTML += planHTML;
+
+			if (planKey === 'ada-lovelace') {
+                container.innerHTML += `<div class="sponsors-divider"></div>`;
+            }
 		}
 	});
 

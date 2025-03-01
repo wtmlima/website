@@ -571,6 +571,7 @@ section {
 	max-width: 1200px;
 	margin: 0 auto;
 	text-align: center;
+	padding: 2rem 2rem;
 }
 
 .sponsors-title {
@@ -578,6 +579,7 @@ section {
 	font-weight: 700;
 	color: #202124;
 	margin-bottom: 3rem;
+	text-align: left;
 }
 
 .sponsor-name {
@@ -714,6 +716,7 @@ section {
 .agenda-container {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 2rem 2rem;
 }
 
 .agenda-title {
@@ -721,6 +724,7 @@ section {
 	font-weight: 700;
 	color: #202124;
 	margin-bottom: 2rem;
+	text-align: left;
 }
 
 .agenda iframe {
