@@ -17,6 +17,30 @@
 			"role": "Curriculum Developer @DeepLearningAi and GDE Machine Learning",
 			"image": "./assets/images/speakers/lesly-zerna.jpeg",
 			"linkedin": "https://www.linkedin.com/in/lesly-zerna/"
+		},
+		{
+			"name": "Melissa Amado Vidal",
+			"role": "CEO Bee3 Technology",
+			"image": "./assets/images/speakers/melissa-amado-vidal.jpg",
+			"linkedin": "https://www.linkedin.com/in/melissa-amado-8153a142/"
+		},
+		{
+			"name": "Keyla Dolores Méndez",
+			"role": "Microsoft MVP & Data Architect",
+			"image": "./assets/images/speakers/keyla-dolores-mendez.png",
+			"linkedin": "https://www.linkedin.com/in/keyladolores"
+		},
+		{
+			"name": "Yeraldine Martínez",
+			"role": "Arquitecta de Soluciones de Salesforce Marketing Cloud",
+			"image": "./assets/images/speakers/yeraldine-martinez.jpg",
+			"linkedin": "https://www.linkedin.com/in/yerita02"
+		},
+		{
+			"name": "Yoselyn Solano",
+			"role": "Canva Ambassador - Notion Ambassador - Content Creator en The Workflow Company",
+			"image": "./assets/images/speakers/yoselyn-solano.png",
+			"linkedin": "https://www.linkedin.com/in/yoselyn-solano/"
 		}
 	],
 	"ambassadors": [

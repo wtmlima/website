@@ -382,7 +382,7 @@ section {
 }
 
 .speakers-button:hover {
-	background-color: #0F7C67;
+	background-color: #0f7c67;
 }
 
 /* Speaker Cards */
@@ -714,7 +714,6 @@ section {
 }
 
 .agenda-container {
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2rem 2rem;
 }
