@@ -97,6 +97,10 @@ section {
 	scroll-margin-top: 80px;
 }
 
+.main-content {
+    flex: 1;
+}
+
 /* -------------------------- */
 /* Hero Section */
 /* -------------------------- */
@@ -152,12 +156,16 @@ section {
 .hero-photo {
 	position: relative;
 	width: 100%;
-	max-width: 450px;
+	max-width: 500px;
 	height: auto;
-	border-radius: 50%;
+	border-radius: 5%;
 	object-fit: cover;
 	z-index: 1;
 	background-color: var(--light-green);
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	-ms-border-radius: 5%;
+	-o-border-radius: 5%;
 }
 
 /* -------------------------- */
@@ -772,7 +780,7 @@ section {
 	}
 
 	.hero h1 {
-		font-size: 65px;
+		font-size: 27px;
 		word-break: break-word;
 		margin: 0 auto 1rem;
 		padding: 0 1rem;
@@ -780,7 +788,7 @@ section {
 	}
 
 	.hero p {
-		font-size: 1.2rem;
+		font-size: 1rem;
 		line-height: 1.5;
 		margin-bottom: 20px;
 		padding: 0 1rem;
@@ -812,7 +820,7 @@ section {
 		max-width: 320px;
 		text-align: center;
 		padding: 1rem;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		border-radius: 8px;
 	}
 
@@ -933,7 +941,6 @@ section {
 	color: white;
 	padding: 2rem 0;
 	text-align: center;
-	min-height: 200px;
 }
 
 .footer-container {
@@ -942,7 +949,6 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
 }
 
 /* Social Media Icons */
