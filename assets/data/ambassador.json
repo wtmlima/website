@@ -1,0 +1,136 @@
+{
+	"ambassadors": [
+		{
+			"name": "Kattya Cuevas",
+			"role": "Ruby Peru organizer",
+			"image": "./assets/images/ambassadors/kattya-cuevas.jpeg",
+			"linkedin": "https://www.linkedin.com/in/KattyaCuevas/"
+		},
+		{
+			"name": "Katherine Chauca",
+			"role": "GDG Cloud Lima Organizer",
+			"image": "./assets/images/ambassadors/katherine-chauca.jpeg",
+			"linkedin": "https://www.linkedin.com/in/katherinechauca/"
+		},
+		{
+			"name": "Marcelim Rondon",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/marcelim-rondon.jpeg",
+			"linkedin": "https://www.linkedin.com/in/marcelim-rondon/"
+		},
+		{
+			"name": "Alejandra Gómez",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/alejandra-gomez.jpg",
+			"linkedin": "https://www.linkedin.com/in/alejandragomezcasani/"
+		},
+		{
+			"name": "Julissa Rodriguez",
+			"role": "Perú .NET Development Organizer",
+			"image": "./assets/images/ambassadors/julissa-rodriguez.jpeg",
+			"linkedin": "https://www.linkedin.com/in/julissarodriguezparco/"
+		},
+		{
+			"name": "Yovany Romero",
+			"role": "Data Growth Community",
+			"image": "./assets/images/ambassadors/yovany-romero.jpg",
+			"linkedin": "https://www.linkedin.com/in/printxiomara/"
+		},
+		{
+			"name": "Victoria Ubaldo",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/victoria-ubaldo.jpeg",
+			"linkedin": "https://www.linkedin.com/in/victoriaubaldo"
+		},
+		{
+			"name": "Rihana Avila",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/rihana-avila.jpg",
+			"linkedin": "https://www.linkedin.com/in/rihana-avila/"
+		},
+		{
+			"name": "Melissa Gave",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/melissa-gave.jpg",
+			"linkedin": "https://www.linkedin.com/in/melissagavemq"
+		},
+		{
+			"name": "Jackelin Salazar",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/jackelin-salazar.jpg",
+			"linkedin": "https://www.linkedin.com/in/jackelinsalazar"
+		},
+		{
+			"name": "Gina Acosta",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/gina-acosta.jpg",
+			"linkedin": "https://www.linkedin.com/in/ginacostag/"
+		},
+		{
+			"name": "Sarai Alejandro",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/sarai-alejandro.jpg",
+			"linkedin": "https://www.linkedin.com/in/sarai-esther-alejandro-casas-86492b237/"
+		},
+		{
+			"name": "Edith Canelo",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/edith-canelo.jpg",
+			"linkedin": "https://www.linkedin.com/in/edith-canelo/"
+		},
+		{
+			"name": "Camila Castillo",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/camila-castillo.jpg",
+			"linkedin": "https://www.linkedin.com/in/camila-castillo-vilcahuaman-073282a0/"
+		},
+		{
+			"name": "Alanis Gonzalez",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/alanis-gonzalez.jpg",
+			"linkedin": "https://www.linkedin.com/in/alanisgonzalez/"
+		},
+		{
+			"name": "Josselyn Hinostroza",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/josselyn-hinostroza.jpg",
+			"linkedin": "https://www.linkedin.com/in/josselynhd/"
+		},
+		{
+			"name": "Macarena Mansilla",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/macarena-mansilla.jpg",
+			"linkedin": "https://www.linkedin.com/in/macarena-ayleen-mansilla-mahmud-519210155/"
+		},
+		{
+			"name": "Wendy Morales",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/wendy-morales.jpg",
+			"linkedin": "https://www.linkedin.com/in/wmoralesy"
+		},
+		{
+			"name": "Lesly Samaritano",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/lesly-samaritano.jpg",
+			"linkedin": "https://www.linkedin.com/in/leslysamaritano/"
+		},
+		{
+			"name": "Geraldin Santos",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/geraldin-santos.jpg",
+			"linkedin": "https://www.linkedin.com/in/geraldinsantos/"
+		},
+		{
+			"name": "Shirley Sosa",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/shirley-sosa.jpg",
+			"linkedin": "https://www.linkedin.com/in/shirsosa/"
+		},
+		{
+			"name": "Carla Torre",
+			"role": "WTM Ambassador",
+			"image": "./assets/images/ambassadors/carla-torre.jpg",
+			"linkedin": "https://www.linkedin.com/in/carlatorre/"
+		}
+	]
+}
