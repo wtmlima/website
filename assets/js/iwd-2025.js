@@ -66,7 +66,7 @@ if (hamburger && navLinks) {
 
 document.addEventListener('DOMContentLoaded', function () {
 	const starContainers = document.querySelectorAll('.stars-container');
-	const numStars = 6; // Number of stars to generate in each container
+	const numStars = 12; // Number of stars to generate in each container
 
 	starContainers.forEach((container) => {
 		const starColor = container.getAttribute('data-color') || '#1a5745'; // Default color if not set
@@ -189,8 +189,8 @@ function renderSponsors(sponsors) {
 			container.innerHTML += planHTML;
 
 			if (planKey === 'ada-lovelace') {
-                container.innerHTML += `<div class="sponsors-divider"></div>`;
-            }
+				container.innerHTML += `<div class="sponsors-divider"></div>`;
+			}
 		}
 	});
 

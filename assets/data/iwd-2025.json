@@ -195,6 +195,22 @@
 				"website": "https://www.instagram.com/ieee.cs.untels/"
 			}
 		],
-		"carol-shaw": []
+		"carol-shaw": [
+			{
+				"name": "Glisse Jorge",
+				"logo": "./assets/images/ambassadors/glisse-jorge.jpg",
+				"website": "https://www.linkedin.com/in/glissejorge"
+			},
+			{
+				"name": "Victoria Ubaldo",
+				"logo": "./assets/images/ambassadors/victoria-ubaldo.jpeg",
+				"website": "https://www.linkedin.com/in/victoriaubaldo"
+			},
+			{
+				"name": "Wendy Morales",
+				"logo": "./assets/images/ambassadors/wendy-morales.jpg",
+				"website": "https://www.linkedin.com/in/wmoralesy"
+			}
+		]
 	}
 }
