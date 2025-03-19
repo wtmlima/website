@@ -41,7 +41,146 @@
 			"role": "Canva Ambassador - Notion Ambassador - Content Creator en The Workflow Company",
 			"image": "./assets/images/speakers/yoselyn-solano.png",
 			"linkedin": "https://www.linkedin.com/in/yoselyn-solano/"
+		},
+		{
+			"name": "Katherine Velásquez",
+			"role": "CoE Lead DevOps en Telefónica del Perú",
+			"image": "./assets/images/speakers/katherine-velasquez.png",
+			"linkedin": "https://www.linkedin.com/in/katherine-velásquez-hinostroza-55137154/"
+		},
+		{
+			"name": "Kattya Cuevas",
+			"role": " Ruby & JS developer, Organizer Ruby Peru",
+			"image": "./assets/images/ambassadors/kattya-cuevas.jpeg",
+			"linkedin": "https://www.linkedin.com/in/KattyaCuevas/"
+		},
+		{
+			"name": "Katherine Chauca",
+			"role": "Ingeniera Informática y Product Owner",
+			"image": "./assets/images/ambassadors/katherine-chauca.jpeg",
+			"linkedin": "https://www.linkedin.com/in/katherinechauca/"
+		},
+		{
+			"name": "Alejandra Gómez",
+			"role": "Software Engineer | Web App Creator | AI Enthusiast",
+			"image": "./assets/images/ambassadors/alejandra-gomez.jpg",
+			"linkedin": "https://www.linkedin.com/in/alejandragomezcasani/"
+		},
+		{
+			"name": "Yovany Romero",
+			"role": "Scrum Master | Frontend Developer",
+			"image": "./assets/images/ambassadors/yovany-romero.jpg",
+			"linkedin": "https://www.linkedin.com/in/printxiomara/"
+		},
+		{
+			"name": "Rihana Avila",
+			"role": "Program Reviewer en TryEngineering y ICANN Fellow",
+			"image": "./assets/images/ambassadors/rihana-avila.jpg",
+			"linkedin": "https://www.linkedin.com/in/rihana-avila/"
+		},
+		{
+			"name": "Lesly Samaritano",
+			"role": "Jr. Flutter Developer & Contend Creator",
+			"image": "./assets/images/ambassadors/lesly-samaritano.jpg",
+			"linkedin": "https://www.linkedin.com/in/leslysamaritano/"
+		},
+		{
+			"name": "Shirley Sosa",
+			"role": " UX Designer y Product Lead en Garabatos LAB",
+			"image": "./assets/images/ambassadors/shirley-sosa.jpg",
+			"linkedin": "https://www.linkedin.com/in/shirsosa/"
+		},
+		{
+			"name": "Natali Lujan",
+			"role": "Innovating Business Solutions through Data Science",
+			"image": "./assets/images/ambassadors/natali-lujan.jpg",
+			"linkedin": "https://www.linkedin.com/in/natali-lujan-allende/"
+		},
+		{
+			"name": "Yeraldine Martínez",
+			"role": "Arquitecta de Soluciones de Salesforce Marketing Cloud",
+			"image": "./assets/images/speakers/yeraldine-martinez.jpg",
+			"linkedin": "http://linkedin.com/in/yerita02/"
+		},
+		{
+			"name": "Cristina Araujo",
+			"role": "BBVA Peru - Software Expert|Scrum Master",
+			"image": "./assets/images/speakers/cristina-araujo.png",
+			"linkedin": "http://linkedin.com/in/cris-araujo/"
+		},
+		{
+			"name": "Sofía Chuquín",
+			"role": "Senior Software Engineer en FullStack Labs",
+			"image": "./assets/images/speakers/sofia-chuquin.jpg",
+			"linkedin": "http://linkedin.com/in/sofiachuquin/"
+		},
+		{
+			"name": "Katherine Koo",
+			"role": "Fundadora de Wara Horizon",
+			"image": "./assets/images/speakers/katherine-koo.jpg",
+			"linkedin": "https://www.linkedin.com/in/katherine-koo-t0w0i6n/"
+		},
+		{
+			"name": "Fiorella Cisneros",
+			"role": "Webflow Expert en forHuman Studio",
+			"image": "./assets/images/speakers/fiorella-cisneros.jpg",
+			"linkedin": "https://www.linkedin.com/in/fiorella-cisneros/"
+		},
+		{
+			"name": "Danitza Rosas",
+			"role": "Product Designer",
+			"image": "./assets/images/speakers/danitza-rosas.jpg",
+			"linkedin": "https://www.linkedin.com/in/danitza-rosas/"
+		},
+		{
+			"name": "Daniela Galindo",
+			"role": "Data Analyst",
+			"image": "./assets/images/speakers/daniela-galindo.jpg",
+			"linkedin": "https://www.linkedin.com/in/danielagalindomaldonado/"
+		},
+		{
+			"name": "Lusiana Varela",
+			"role": "Founder de PsicoBooking S.A.C",
+			"image": "./assets/images/speakers/lusiana-varela.jpg",
+			"linkedin": "https://www.linkedin.com/in/lusiana-varela-b286a820b/"
+		},
+		{
+			"name": "Maryury García",
+			"role": "Gerente de Cuenta en Tecnología",
+			"image": "./assets/images/speakers/maryury-garcia.png",
+			"linkedin": "https://www.linkedin.com/in/margarcialiderazgo"
+		},
+		{
+			"name": "Bianca Torres",
+			"role": "Ingeniera DevOps en Globant",
+			"image": "./assets/images/speakers/bianca-torres.jpg",
+			"linkedin": "https://www.linkedin.com/es/bianca-torres-chumbes/"
+		},
+		{
+			"name": "Andrea Bustamante",
+			"role": "Software Engineer | Web App Creator | AI Enthusiast",
+			"image": "./assets/images/speakers/andrea-bustamante.png",
+			"linkedin": "https://www.linkedin.com/es/andrea-bustamante-sosa"
+		},
+		{
+			"name": "Sherly Tarazona",
+			"role": "Caja Arequipa, Jefa de Advanced Analytics",
+			"image": "./assets/images/speakers/sherly-tarazona.jpg",
+			"linkedin": "http://linkedin.com/in/sherlytarazonatocto"
+		},
+		{
+			"name": "Laura Cabello",
+			"role": "Product Designer at Haystack News",
+			"image": "./assets/images/speakers/laura-cabello.jpg",
+			"linkedin": "http://linkedin.com/in/lauracabelloa/"
+		},
+		{
+			"name": "Glisse Jorge",
+			"role": "Backend Developer",
+			"image": "./assets/images/ambassadors/glisse-jorge.jpg",
+			"linkedin": "https://www.linkedin.com/in/glissejorge/"
 		}
+
 	],
 	"ambassadors": [
 		{

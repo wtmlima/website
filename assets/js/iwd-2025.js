@@ -110,7 +110,20 @@ function renderSpeakers(speakers) {
 	const container = document.querySelector('.speakers-list');
 	container.innerHTML = '';
 
-	speakers.forEach((speaker) => {
+	// Crear un conjunto aleatorio de 12 speakers únicos
+    const randomSpeakers = [];
+    const usedIndexes = new Set();
+
+    while (randomSpeakers.length < 12 && usedIndexes.size < speakers.length) {
+        const randomIndex = Math.floor(Math.random() * speakers.length);
+        if (!usedIndexes.has(randomIndex)) {
+            usedIndexes.add(randomIndex);
+            randomSpeakers.push(speakers[randomIndex]);
+        }
+    }
+
+    // Renderizar los 12 speakers seleccionados
+	randomSpeakers.forEach((speaker) => {
 		const speakerHTML = `
         <div class="speaker-card">
             <div class="speaker-frame">
