@@ -33,3 +33,9 @@
   to = "https://sessionize.com/iwd-lima-2025/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/iwd-2026"
+  to = "/iwd-2026.html"
+  status = 200
+  force = true

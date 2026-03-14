@@ -1,0 +1,24 @@
+{
+	"speakers": [],
+	"ambassadors": [],
+	"sponsors": {
+		"ada-lovelace": [],
+		"grace-hopper": [],
+		"margaret-hamilton": [],
+		"hedy-lamarr": [
+			{
+				"name": "Perú .NET Development",
+				"image": "./assets/images/communities/perunetdev.png",
+				"url": "https://www.instagram.com/perunetdev",
+				"showName": true
+			},
+			{
+				"name": "GDG Cloud Lima",
+				"image": "./assets/images/communities/gdg-cloud-lima.png",
+				"url": "https://gdg.community.dev/gdg-cloud-lima/",
+				"showName": true
+			}
+		],
+		"carol-shaw": []
+	}
+}
