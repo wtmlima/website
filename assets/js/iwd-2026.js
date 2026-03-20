@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	generatePixelPattern();
 
 	// Intersection Observer for fade-in animations
-	const observer = new IntersectionObserver(
+	window.fadeObserver = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ threshold: 0.1 }
 	);
 
-	document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+	document.querySelectorAll('.fade-in').forEach((el) => window.fadeObserver.observe(el));
 
 	// Animated counters
 	const counterObserver = new IntersectionObserver(
@@ -163,6 +163,8 @@ async function loadData() {
 		renderSpeakers(data.speakers);
 		renderAmbassadors(data.ambassadors);
 		renderSponsors(data.sponsors);
+		regeneratePixelPatterns();
+		observeDynamicFadeIns();
 	} catch (error) {
 		console.warn(
 			'Fetch failed (likely file:// protocol), using fallback:',
@@ -191,7 +193,52 @@ async function loadData() {
 			],
 			'carol-shaw': [],
 		});
+		regeneratePixelPatterns();
+		observeDynamicFadeIns();
 	}
+}
+
+function regeneratePixelPatterns() {
+	const doRegenerate = () => {
+		document.querySelectorAll('.pixel-pattern').forEach((container) => {
+			container.innerHTML = '';
+			const style = container.dataset.style || 'grid';
+			if (style === 'grid') {
+				generateGrid(container);
+			} else {
+				generateCornerBlocks(container);
+			}
+		});
+	};
+
+	doRegenerate();
+
+	// Regenerate after images load since they change section height
+	const images = document.querySelectorAll('.ambassador-photo, .speaker-photo');
+	let loaded = 0;
+	const total = images.length;
+	if (total === 0) return;
+	images.forEach((img) => {
+		if (img.complete) {
+			loaded++;
+			if (loaded === total) doRegenerate();
+		} else {
+			img.addEventListener('load', () => {
+				loaded++;
+				if (loaded === total) doRegenerate();
+			}, { once: true });
+			img.addEventListener('error', () => {
+				loaded++;
+				if (loaded === total) doRegenerate();
+			}, { once: true });
+		}
+	});
+}
+
+function observeDynamicFadeIns() {
+	document.querySelectorAll('.fade-in:not(.visible)').forEach((el) => {
+		window.fadeObserver.observe(el);
+	});
 }
 
 function renderSpeakers(speakers) {
@@ -228,15 +275,23 @@ function renderAmbassadors(ambassadors) {
 		return;
 	}
 
-	container.innerHTML = ambassadors
+	const shuffled = [...ambassadors];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+
+	container.innerHTML = shuffled
 		.map(
 			(amb) => `
 		<div class="ambassador-card fade-in">
+			${amb.linkedin ? `<a href="${amb.linkedin}" target="_blank" rel="noopener noreferrer">` : ''}
 			<div class="ambassador-frame">
 				<img class="ambassador-photo" src="${amb.image}" alt="${amb.name}" />
 			</div>
 			<h3>${amb.name}</h3>
 			<p>${amb.role}</p>
+			${amb.linkedin ? `</a>` : ''}
 		</div>
 	`
 		)
@@ -264,7 +319,7 @@ function renderSponsors(sponsors) {
 
 	if (!hasSponsor) {
 		container.innerHTML =
-			'<p class="sponsors-coming-soon">Convocatoria de sponsors abierta. Escr\u00edbenos para ser parte.</p>';
+			'<p class="sponsors-coming-soon">Convocatoria de sponsors abierta</p><a href="mailto:hola@wtmlima.com" class="cta-button sponsors-cta-button">Quiero ser sponsor</a>';
 		return;
 	}
 
@@ -301,5 +356,6 @@ function renderSponsors(sponsors) {
 		`;
 		renderedCount++;
 	}
+	html += '<div class="sponsors-cta-wrapper"><a href="mailto:hola@wtmlima.com" class="cta-button sponsors-cta-button">Quiero ser sponsor</a></div>';
 	container.innerHTML = html;
 }

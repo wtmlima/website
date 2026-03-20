@@ -1,6 +1,103 @@
 {
 	"speakers": [],
-	"ambassadors": [],
+	"ambassadors": [
+		{
+			"name": "Julissa Rodriguez",
+			"image": "./assets/images/ambassadors/julissa-rodriguez.jpeg",
+			"role": "Perú .NET Development Organizer",
+			"linkedin": "https://www.linkedin.com/in/julissarodriguezparco/"
+		},
+		{
+			"name": "Lesly Samaritano",
+			"image": "./assets/images/ambassadors/lesly-samaritano.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/leslysamaritano/"
+		},
+		{
+			"name": "Marcelim Rondón",
+			"image": "./assets/images/ambassadors/marcelim-rondon.jpeg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/marcelim-rondon/"
+		},
+		{
+			"name": "Josselyn Hinostroza",
+			"image": "./assets/images/ambassadors/josselyn-hinostroza.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/josselynhd/"
+		},
+		{
+			"name": "Natali Lujan",
+			"image": "./assets/images/ambassadors/natali-lujan.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/natali-lujan-allende/"
+		},
+		{
+			"name": "Kattya Cuevas",
+			"image": "./assets/images/ambassadors/kattya-cuevas.jpeg",
+			"role": "Ruby Peru Organizer",
+			"linkedin": "https://www.linkedin.com/in/KattyaCuevas/"
+		},
+		{
+			"name": "Alanis Gonzalez",
+			"image": "./assets/images/ambassadors/alanis-gonzalez.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/alanisgonzalez/"
+		},
+		{
+			"name": "Andrea Pachas",
+			"image": "./assets/images/ambassadors/andrea-pachas.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/andrea-pachas/"
+		},
+		{
+			"name": "Katherine Chauca",
+			"image": "./assets/images/ambassadors/katherine-chauca.jpeg",
+			"role": "GDG Cloud Lima Organizer",
+			"linkedin": "https://www.linkedin.com/in/katherinechauca/"
+		},
+		{
+			"name": "Jackelin Salazar",
+			"image": "./assets/images/ambassadors/jackelin-salazar.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/jackelinsalazar"
+		},
+		{
+			"name": "Rihana Avila",
+			"image": "./assets/images/ambassadors/rihana-avila.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/rihana-avila/"
+		},
+		{
+			"name": "Shirley Sosa",
+			"image": "./assets/images/ambassadors/shirley-sosa.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/shirsosa/"
+		},
+		{
+			"name": "Yovany Romero",
+			"image": "./assets/images/ambassadors/yovany-romero.jpg",
+			"role": "Data Growth Community",
+			"linkedin": "https://www.linkedin.com/in/printxiomara/"
+		},
+		{
+			"name": "Sihomara Ochoa",
+			"image": "./assets/images/ambassadors/sihomara-ochoa.jpeg",
+			"role": "Organizadora",
+			"linkedin": "https://www.linkedin.com/in/sihomara-sandy-ochoa-cisneros"
+		},
+		{
+			"name": "Victoria Ubaldo",
+			"image": "./assets/images/ambassadors/victoria-ubaldo.jpeg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/victoriaubaldo"
+		},
+		{
+			"name": "Wendy Morales",
+			"image": "./assets/images/ambassadors/wendy-morales.jpg",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/wmoralesy"
+		}
+	],
 	"sponsors": {
 		"ada-lovelace": [],
 		"grace-hopper": [],
