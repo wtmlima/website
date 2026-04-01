@@ -114,6 +114,31 @@
 				"image": "./assets/images/communities/gdg-cloud-lima-2026.png",
 				"url": "https://gdg.community.dev/gdg-cloud-lima/",
 				"showName": true
+			},
+			{
+				"name": "Club Canva Perú",
+				"image": "./assets/images/communities/club-canva-peru.png",
+				"url": "https://www.instagram.com/clubcanvape",
+				"linkedin": "https://www.linkedin.com/company/clubcanvape",
+				"showName": true
+			},
+			{
+				"name": "Women in DataLab",
+				"image": "./assets/images/communities/women-in-datalab.png",
+				"url": "https://linktr.ee/womenindatalab17",
+				"showName": true
+			},
+			{
+				"name": "Women Biz",
+				"image": "./assets/images/communities/women-biz.png",
+				"url": "https://www.linkedin.com/company/women-biz",
+				"showName": true
+			},
+			{
+				"name": "IEEE Women in Engineering Perú",
+				"image": "./assets/images/communities/ieee-wie-peru.png",
+				"url": "https://www.instagram.com/ieeewieperu/",
+				"showName": true
 			}
 		],
 		"carol-shaw": []
