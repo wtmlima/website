@@ -139,6 +139,24 @@
 				"image": "./assets/images/communities/ieee-wie-peru.png",
 				"url": "https://www.instagram.com/ieeewieperu/",
 				"showName": true
+			},
+			{
+				"name": "DevGirls UTP",
+				"image": "./assets/images/communities/dev-girls.png",
+				"url": "https://www.linkedin.com/in/devgirls-utp-1678493b9/",
+				"showName": true
+			},
+			{
+				"name": "IEEE CS - UNTELS",
+				"image": "./assets/images/communities/ieee_untels_cs_rgb_pp_c.png",
+				"url": "https://www.instagram.com/ieee.cs.untels/",
+				"showName": true
+			},
+			{
+				"name": "WIE IEEE USIL",
+				"image": "./assets/images/communities/ieee_usil.png",
+				"url": "https://www.instagram.com/wie.ieee.usil/",
+				"showName": true
 			}
 		],
 		"carol-shaw": []

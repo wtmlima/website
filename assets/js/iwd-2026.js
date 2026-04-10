@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		{ threshold: 0.1 }
 	);
 
-	document.querySelectorAll('.fade-in').forEach((el) => window.fadeObserver.observe(el));
+	document
+		.querySelectorAll('.fade-in')
+		.forEach((el) => window.fadeObserver.observe(el));
 
 	// Animated counters
 	const counterObserver = new IntersectionObserver(
@@ -223,14 +225,22 @@ function regeneratePixelPatterns() {
 			loaded++;
 			if (loaded === total) doRegenerate();
 		} else {
-			img.addEventListener('load', () => {
-				loaded++;
-				if (loaded === total) doRegenerate();
-			}, { once: true });
-			img.addEventListener('error', () => {
-				loaded++;
-				if (loaded === total) doRegenerate();
-			}, { once: true });
+			img.addEventListener(
+				'load',
+				() => {
+					loaded++;
+					if (loaded === total) doRegenerate();
+				},
+				{ once: true }
+			);
+			img.addEventListener(
+				'error',
+				() => {
+					loaded++;
+					if (loaded === total) doRegenerate();
+				},
+				{ once: true }
+			);
 		}
 	});
 }
@@ -254,11 +264,19 @@ function renderSpeakers(speakers) {
 			(speaker) => `
 		<div class="speaker-card fade-in">
 			<div class="speaker-frame">
-				<img class="speaker-photo" src="${speaker.image}" alt="${speaker.name}" />
+				<img 
+					class="speaker-photo" 
+					src="${speaker.image}" 
+					alt="${speaker.name}"
+					loading="lazy"
+					decoding="async"
+					width="300"
+					height="300"
+				/>
 			</div>
 			<h3>${speaker.name}</h3>
 			<p>${speaker.role}</p>
-			${speaker.linkedin ? `<a href="${speaker.linkedin}" target="_blank" class="speaker-linkedin">LinkedIn</a>` : ''}
+			${speaker.linkedin ? `<a href="${speaker.linkedin}" target="_blank" rel="noopener noreferrer" class="speaker-linkedin">LinkedIn</a>` : ''}
 		</div>
 	`
 		)
@@ -287,7 +305,15 @@ function renderAmbassadors(ambassadors) {
 		<div class="ambassador-card fade-in">
 			${amb.linkedin ? `<a href="${amb.linkedin}" target="_blank" rel="noopener noreferrer">` : ''}
 			<div class="ambassador-frame">
-				<img class="ambassador-photo" src="${amb.image}" alt="${amb.name}" />
+				<img 
+					class="ambassador-photo" 
+					src="${amb.image}" 
+					alt="${amb.name}"
+					loading="lazy"
+					decoding="async"
+					width="200"
+					height="200"
+				/>
 			</div>
 			<h3>${amb.name}</h3>
 			<p>${amb.role}</p>
@@ -343,8 +369,15 @@ function renderSponsors(sponsors) {
 					.map(
 						(s) => `
 					<div class="sponsor-item">
-						<a href="${s.url || '#'}" target="_blank">
-							<img src="${s.image}" alt="${s.name}" />
+						<a href="${s.url || '#'}" target="_blank" rel="noopener noreferrer">
+							<img 
+								src="${s.image}" 
+								alt="${s.name}"
+								loading="lazy"
+								decoding="async"
+								width="200"
+								height="100"
+							/>
 							${s.showName ? `<span class="sponsor-name">${s.name}</span>` : ''}
 						</a>
 					</div>
@@ -356,6 +389,7 @@ function renderSponsors(sponsors) {
 		`;
 		renderedCount++;
 	}
-	html += '<div class="sponsors-cta-wrapper"><a href="mailto:hola@wtmlima.com" class="cta-button sponsors-cta-button">Quiero ser sponsor</a></div>';
+	html +=
+		'<div class="sponsors-cta-wrapper"><a href="mailto:hola@wtmlima.com" class="cta-button sponsors-cta-button">Quiero ser sponsor</a></div>';
 	container.innerHTML = html;
 }
