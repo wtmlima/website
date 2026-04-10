@@ -10,7 +10,15 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
+			media="print"
+			onload="this.media = 'all'"
 		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 		<link
 			href="./assets/images/WTM_icon.png"
 			rel="shortcut icon"
@@ -700,10 +708,17 @@
 			</div>
 		</footer>
 
-		<script
-			id="luma-checkout"
-			src="https://embed.lu.ma/checkout-button.js"
-		></script>
-		<script src="./assets/js/iwd-2026.js"></script>
+		<script src="./assets/js/iwd-2026.js" defer></script>
+		<script>
+			window.addEventListener('load', function () {
+				if (document.querySelector('[data-luma-action="checkout"]')) {
+					var script = document.createElement('script');
+					script.id = 'luma-checkout';
+					script.src = 'https://embed.lu.ma/checkout-button.js';
+					script.async = true;
+					document.body.appendChild(script);
+				}
+			});
+		</script>
 	</body>
 </html>

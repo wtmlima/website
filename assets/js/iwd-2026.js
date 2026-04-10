@@ -160,6 +160,11 @@ function animateCounter(el) {
 async function loadData() {
 	try {
 		const response = await fetch('./assets/data/iwd-2026.json');
+
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+
 		const data = await response.json();
 
 		renderSpeakers(data.speakers);
@@ -168,10 +173,7 @@ async function loadData() {
 		regeneratePixelPatterns();
 		observeDynamicFadeIns();
 	} catch (error) {
-		console.warn(
-			'Fetch failed (likely file:// protocol), using fallback:',
-			error
-		);
+		console.info('Using fallback data for local development');
 		// Fallback for local file:// testing
 		renderSpeakers([]);
 		renderAmbassadors([]);
