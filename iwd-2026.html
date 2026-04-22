@@ -691,18 +691,12 @@
 			// 		document.body.appendChild(script);
 			// 	}
 			// });
-			    window.addEventListener('message', function(e) {
+			   window.addEventListener('message', function(e) {
 					if (e.data && e.data.agendaHeight) {
 						var frame = document.getElementById('agendaFrame');
-						if (frame) {
-							var newH = Math.ceil(e.data.agendaHeight) + 40;
-							// Solo actualizar si la nueva altura es MAYOR que la actual
-							// para evitar que se encoja si llega un mensaje tardío
-							var currentH = parseInt(frame.style.height) || 0;
-							if (newH > currentH) {
-								frame.style.height = newH + 'px';
-							}
-						}
+						if (!frame) return;
+						var newH = Math.ceil(e.data.agendaHeight) + 20; // +20px margen
+						frame.style.height = newH + 'px';
 					}
 				});
 
