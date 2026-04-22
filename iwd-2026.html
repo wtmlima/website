@@ -562,12 +562,7 @@
 						<h2 class="section-title">Agenda</h2>
 					</div>
 
-					<!-- Este es el código que SÍ funciona en producción -->
-					<div class="sessionize-loader" data-sessionize-load-url="https://sessionize.com/api/v2/6gpc0cd3/view/GridSmart?under=True">
-						<div class="sz-spinner"></div>
-					</div>
-					<script type="text/javascript" src="https://sessionize.com/api/v2/6gpc0cd3/view/GridSmart"></script>
-
+					<iframe id="agendaFrame" src="agenda.html" frameborder="0" scrolling="no" style="width: 100%; border: none; display: block;"></iframe>
 				</div>
 			</section>
 		</main>
@@ -687,15 +682,26 @@
 
 		<script src="./assets/js/iwd-2026.js" defer></script>
 		<script>
-			window.addEventListener('load', function () {
-				if (document.querySelector('[data-luma-action="checkout"]')) {
-					var script = document.createElement('script');
-					script.id = 'luma-checkout';
-					script.src = 'https://embed.lu.ma/checkout-button.js';
-					script.async = true;
-					document.body.appendChild(script);
-				}
-			});
+			// window.addEventListener('load', function () {
+			// 	if (document.querySelector('[data-luma-action="checkout"]')) {
+			// 		var script = document.createElement('script');
+			// 		script.id = 'luma-checkout';
+			// 		script.src = 'https://embed.lu.ma/checkout-button.js';
+			// 		script.async = true;
+			// 		document.body.appendChild(script);
+			// 	}
+			// });
+			    window.addEventListener('message', function(e) {
+					if (e.data && e.data.agendaHeight) {
+						var frame = document.getElementById('agendaFrame');
+						if (frame) {
+							// Usar la altura exacta reportada + pequeño margen
+							var newH = Math.ceil(e.data.agendaHeight) + 20;
+							frame.style.height = newH + 'px';
+						}
+					}
+				});
+
 		</script>
 	</body>
 </html>

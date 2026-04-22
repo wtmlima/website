@@ -188,7 +188,6 @@ nav {
 	position: relative;
 }
 
-/* Small pixel accents on THE pill */
 .the-pill::before {
 	content: '';
 	position: absolute;
@@ -209,7 +208,6 @@ nav {
 	left: 8px;
 }
 
-/* Pixel blocks layered on top of text */
 .px {
 	position: absolute;
 	z-index: 3;
@@ -269,7 +267,6 @@ nav {
 	position: relative;
 }
 
-/* Decorative green blocks - IWD 2026 branding style */
 .deco-blocks {
 	position: absolute;
 	z-index: 2;
@@ -301,7 +298,6 @@ nav {
 	right: -15px;
 }
 
-/* CTA Button */
 .cta-button {
 	display: inline-block;
 	background-color: var(--green-accent);
@@ -385,7 +381,6 @@ nav {
 	color: var(--blue-primary);
 }
 
-/* Decorative corner blocks */
 .theme-deco {
 	position: absolute;
 	display: grid;
@@ -453,7 +448,6 @@ nav {
 	overflow: hidden;
 }
 
-/* Decorative blocks in speakers section */
 .speakers-deco {
 	position: absolute;
 	display: grid;
@@ -741,7 +735,6 @@ nav {
 	text-align: center;
 }
 
-/* Scattered decorative blocks */
 .scatter-block {
 	position: absolute;
 	background-color: var(--blue-primary);
@@ -911,28 +904,173 @@ nav {
 /* ================================ */
 .agenda {
 	width: 100%;
-	background-color: var(--white);
+	/* Mismo azul del header/hero — consistente con el resto del sitio */
+	background-color: var(--blue-primary);
 	padding: 6rem 2rem;
-	border-top: 1px solid rgba(3, 52, 171, 0.1);
+	border-top: none;
 }
-
-.agenda-container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
+ 
+.agenda-container { max-width: 1200px; margin: 0 auto; }
+ 
+/* "04" número translúcido blanco */
+.agenda .section-number { color: var(--white); opacity: 0.15; }
+ 
+/* "Agenda" en blanco */
+.agenda .section-title { color: var(--white); }
+ 
 .agenda-coming-soon {
 	text-align: center;
 	font-size: 1.5rem;
-	color: var(--blue-primary);
+	color: var(--green-accent);
 	font-weight: 500;
 	padding: 3rem 0;
 }
 
+
+/* ================================ */
+/* iframe Agenda — sin gap blanco   */
+/* ================================ */
+#agendaFrame {
+    width: 100%;
+    border: 0;
+    display: block;
+    background-color: var(--blue-primary);
+    height: 2400px; /* fallback inicial */
+    transition: height 0.4s ease;
+}
+ 
+/* Desktop */
+@media (min-width: 1200px)                         { #agendaFrame { height: 2400px; } }
+@media (min-width: 1024px) and (max-width: 1199px) { #agendaFrame { height: 2600px; } }
+ 
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1023px)  { #agendaFrame { height: 2800px; } }
+ 
+/* Mobile — el postMessage ajusta al tamaño exacto.
+   Estos valores son solo el fallback inicial mientras carga Sessionize. */
+@media (max-width: 768px) { #agendaFrame { height: 5000px; } }
+@media (max-width: 480px) { #agendaFrame { height: 5500px; } }
+@media (max-width: 430px) { #agendaFrame { height: 6000px; } }
+@media (max-width: 430px) { #agendaFrame { height: 5500px; } }
+@media (max-width: 390px) { #agendaFrame { height: 6000px; } }
+@media (max-width: 375px) { #agendaFrame { height: 6000px; } }
+@media (max-width: 320px) { #agendaFrame { height: 6500px; } }
+ 
 /* ================================ */
 /* Footer                           */
 /* ================================ */
 .footer {
+	width: 100%;
+	background-color: var(--footer-bg);
+	color: white;
+	padding: 2rem 0;
+	text-align: center;
+	min-height: 200px;
+}
+ 
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+ 
+.social-links { display: flex; gap: 1.5rem; }
+ 
+.social-links a {
+	color: white;
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+ 
+.social-links a:hover { transform: scale(1.1); color: var(--green-accent); }
+.social-links svg { width: 32px; height: 32px; }
+.footer-text { font-size: 1rem; font-weight: 500; margin-top: 1rem; }
+ 
+/* ================================ */
+/* Animations                       */
+/* ================================ */
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(20px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.fade-in {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+ 
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+ 
+/* ================================ */
+/* Responsive                       */
+/* ================================ */
+@media (max-width: 768px) {
+	:root { --fs-xl: 3rem; --fs-lg: 2.5rem; --fs-md: 2rem; }
+ 
+	.hamburger-menu { display: flex; }
+ 
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px; right: 0;
+		background: var(--blue-primary);
+		width: 100%;
+		text-align: center;
+		padding: 1rem 0;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		z-index: 1000;
+	}
+ 
+	.nav-links a { display: block; padding: 1rem; }
+	.nav-links.active { display: flex; }
+ 
+	.hero { min-height: auto; padding: 6rem 1.5rem 3rem; }
+	.hero-container { flex-direction: column; text-align: center; align-items: center; }
+	.hero-content { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+	.glitch-word { font-size: 2.8rem; }
+	.the-pill { font-size: 1.1rem; }
+	.glitch-line { justify-content: center; }
+	.hero-event-info { text-align: center; }
+	.px { transform: scale(0.6); }
+	.hero-photo { max-width: 100%; height: 280px; }
+	.deco-blocks { display: none; }
+	.cta-button { width: 100%; max-width: 320px; margin: 0 auto; text-align: center; }
+ 
+	.stats { flex-direction: column; gap: 2rem; padding: 3rem 2rem; }
+ 
+	.theme-section { padding: 3rem 1.5rem; }
+	.theme-section h2 { font-size: 1.8rem; }
+	.theme-section p { font-size: 1rem; }
+	.theme-deco { display: none; }
+ 
+	.section-title { font-size: 2rem; }
+	.section-number { font-size: 2.5rem; }
+ 
+	.speakers-deco { display: none; }
+	.speakers-list { flex-direction: column; align-items: center; }
+ 
+	.ambassadors-list { flex-direction: column; align-items: center; }
+ 
+	.scatter-block { display: none; }
+	.sponsor-tier { font-size: 1.5rem; }
+	.sponsor-logos { gap: 1rem; }
+ 
+	.agenda { padding: 3rem 1rem; }
+ 
+	.social-links { gap: 1rem; }
+	.social-links svg { width: 28px; height: 28px; }
+	.footer-text { font-size: 0.9rem; }
+}
+
+
+/* ================================ */
+/* Footer                           */
+/* ================================ */
+/* .footer {
 	width: 100%;
 	background-color: var(--footer-bg);
 	color: white;
@@ -974,12 +1112,12 @@ nav {
 	font-size: 1rem;
 	font-weight: 500;
 	margin-top: 1rem;
-}
+} */
 
 /* ================================ */
 /* Animations                       */
 /* ================================ */
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
 	from {
 		opacity: 0;
 		transform: translateY(20px);
@@ -999,12 +1137,12 @@ nav {
 .fade-in.visible {
 	opacity: 1;
 	transform: translateY(0);
-}
+} */
 
 /* ================================ */
 /* Responsive Design                */
 /* ================================ */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	:root {
 		--fs-xl: 3rem;
 		--fs-lg: 2.5rem;
@@ -1038,7 +1176,6 @@ nav {
 		display: flex;
 	}
 
-	/* Hero */
 	.hero {
 		min-height: auto;
 		padding: 6rem 1.5rem 3rem;
@@ -1093,14 +1230,12 @@ nav {
 		text-align: center;
 	}
 
-	/* Stats */
 	.stats {
 		flex-direction: column;
 		gap: 2rem;
 		padding: 3rem 2rem;
 	}
 
-	/* Theme */
 	.theme-section {
 		padding: 3rem 1.5rem;
 	}
@@ -1117,7 +1252,6 @@ nav {
 		display: none;
 	}
 
-	/* Sections */
 	.section-title {
 		font-size: 2rem;
 	}
@@ -1126,7 +1260,6 @@ nav {
 		font-size: 2.5rem;
 	}
 
-	/* Speakers */
 	.speakers-deco {
 		display: none;
 	}
@@ -1155,13 +1288,11 @@ nav {
 		font-size: 1.4rem;
 	}
 
-	/* Ambassadors */
 	.ambassadors-list {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	/* Sponsors */
 	.scatter-block {
 		display: none;
 	}
@@ -1174,7 +1305,6 @@ nav {
 		gap: 1rem;
 	}
 
-	/* Footer */
 	.social-links {
 		gap: 1rem;
 	}
@@ -1187,4 +1317,8 @@ nav {
 	.footer-text {
 		font-size: 0.9rem;
 	}
-}
+
+	.agenda {
+		padding: 3rem 1rem;
+	}
+} */
