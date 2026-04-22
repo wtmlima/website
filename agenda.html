@@ -202,6 +202,51 @@
             word-break: break-word !important;
             max-width: 100% !important;
         }
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card {
+            background: rgb(28, 233, 182) !important;        /* verde --green-accent */
+            background-color: rgb(28, 233, 182) !important;
+            color: rgb(2, 29, 110) !important;               /* azul oscuro --blue-dark */
+            border-top: none !important;
+            border-left: 4px solid rgb(2, 29, 110) !important;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
+            border-radius: 8px !important;
+        }
+
+        /* Título dentro del card */
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--title,
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--title a {
+            color: rgb(2, 29, 110) !important;
+            font-weight: 700 !important;
+        }
+
+        /* Speaker */
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--speakers,
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--speakers a {
+            color: rgb(3, 52, 171) !important;
+        }
+
+        /* Badge de sala */
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--room {
+            background-color: rgb(2, 29, 110) !important;
+            color: rgb(28, 233, 182) !important;
+        }
+
+        /* Hora */
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--time {
+            color: rgb(3, 52, 171) !important;
+        }
+
+        /* Sesiones de servicio (Registro, Almuerzo, Cierre) — mantener azul oscuro */
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service {
+            background: rgb(2, 29, 110) !important;
+            background-color: rgb(2, 29, 110) !important;
+            border-left: 4px solid rgb(28, 233, 182) !important;
+        }
+
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service .sz-session--title,
+        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service .sz-session--title a {
+            color: rgb(28, 233, 182) !important;
+        }
 
         /* Hora dentro del card */
         .sz-root .sz-session--time {
