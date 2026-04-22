@@ -945,6 +945,10 @@ nav {
 @media (min-width: 769px)  and (max-width: 1023px)  { #agendaFrame { height: 3200px; } }
 @media (max-width: 768px) { #agendaFrame { height: 8000px; } }
 @media (max-width: 480px) { #agendaFrame { height: 9000px; } }
+@media (max-width: 480px) { #agendaFrame { height: 4200px; } }
+@media (max-width: 390px) { #agendaFrame { height: 4600px; } }
+@media (max-width: 375px) { #agendaFrame { height: 4800px; } }
+@media (max-width: 320px) { #agendaFrame { height: 5200px; } }
 @media (max-width: 390px) { #agendaFrame { height: 10000px; } }
 @media (max-width: 320px) { #agendaFrame { height: 11000px; } }
  
