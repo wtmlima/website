@@ -466,50 +466,60 @@
 
     <script>
         var lastH = 0;
-        var stableCount = 0;
+        var observer = null;
 
-        function getContentHeight() {
-            // Medir el contenido real del .agenda-page, no el documento entero
-            var page = document.querySelector('.agenda-page');
-            var inner = document.querySelector('.agenda-inner');
-            if (inner) {
-                // getBoundingClientRect da la altura visual real del contenido
-                var rect = inner.getBoundingClientRect();
-                var pageRect = page ? page.getBoundingClientRect() : { top: 0 };
-                // altura = posición bottom del inner + padding inferior de la página
-                return Math.ceil(rect.bottom - pageRect.top + 48); // 48px de padding inferior
-            }
-            // Fallback: offsetHeight del body
-            return document.body.offsetHeight;
+        function getFullHeight() {
+            // scrollHeight da la altura TOTAL del contenido, incluso lo no visible
+            var body = document.body;
+            var html = document.documentElement;
+            return Math.max(
+                body.scrollHeight,
+                body.offsetHeight,
+                html.scrollHeight,
+                html.offsetHeight
+            ) + 32; // margen de seguridad
         }
 
-        function notifyHeight() {
-            var h = getContentHeight();
+        function sendHeight() {
+            var h = getFullHeight();
             if (h > 200 && h !== lastH) {
                 lastH = h;
-                stableCount = 0;
                 if (window.parent !== window) {
                     window.parent.postMessage({ agendaHeight: h }, '*');
                 }
-            } else if (h === lastH && h > 200) {
-                stableCount++;
             }
         }
 
-        // Disparar múltiples veces — Sessionize tarda en renderizar
-        window.addEventListener('load', function () {
-            [200, 600, 1200, 2000, 3500, 5500, 8000].forEach(function(ms) {
-                setTimeout(notifyHeight, ms);
+        // Disparar en múltiples momentos — Sessionize puede tardar hasta 10s en mobile
+        var intervals = [100, 300, 700, 1500, 3000, 5000, 8000, 12000, 16000];
+        intervals.forEach(function(ms) {
+            setTimeout(sendHeight, ms);
+        });
+
+        window.addEventListener('load', function() {
+            sendHeight();
+            // Seguir intentando cada 2s hasta que el contenido sea estable
+            var attempts = 0;
+            var poller = setInterval(function() {
+                sendHeight();
+                attempts++;
+                if (attempts >= 15) clearInterval(poller);
+            }, 2000);
+        });
+
+        // ResizeObserver — más confiable que MutationObserver para cambios de tamaño
+        if (window.ResizeObserver) {
+            var ro = new ResizeObserver(function() {
+                setTimeout(sendHeight, 100);
             });
-        });
+            ro.observe(document.body);
+        }
 
-        setTimeout(notifyHeight, 50);
-
-        // Observar cambios en el DOM (Sessionize inyecta HTML asíncronamente)
-        var mo = new MutationObserver(function () {
-            setTimeout(notifyHeight, 250);
+        // MutationObserver como fallback
+        var mo = new MutationObserver(function() {
+            setTimeout(sendHeight, 300);
         });
-        mo.observe(document.body, { childList: true, subtree: true });
+        mo.observe(document.body, { childList: true, subtree: true, attributes: true });
     </script>
 </div>
 </body>

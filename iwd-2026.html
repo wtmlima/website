@@ -695,9 +695,13 @@
 					if (e.data && e.data.agendaHeight) {
 						var frame = document.getElementById('agendaFrame');
 						if (frame) {
-							// Usar la altura exacta reportada + pequeño margen
-							var newH = Math.ceil(e.data.agendaHeight) + 20;
-							frame.style.height = newH + 'px';
+							var newH = Math.ceil(e.data.agendaHeight) + 40;
+							// Solo actualizar si la nueva altura es MAYOR que la actual
+							// para evitar que se encoja si llega un mensaje tardío
+							var currentH = parseInt(frame.style.height) || 0;
+							if (newH > currentH) {
+								frame.style.height = newH + 'px';
+							}
 						}
 					}
 				});

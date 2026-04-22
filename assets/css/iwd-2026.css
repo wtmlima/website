@@ -930,31 +930,23 @@ nav {
 /* ================================ */
 /* iframe Agenda — sin gap blanco   */
 /* ================================ */
+/* Reemplaza todos los @media del iframe */
 #agendaFrame {
     width: 100%;
     border: 0;
     display: block;
     background-color: var(--blue-primary);
-    height: 2400px; /* fallback inicial */
+    min-height: 400px; /* nunca colapsa */
+    height: 2400px;    /* fallback desktop */
     transition: height 0.4s ease;
 }
- 
-/* Desktop */
-@media (min-width: 1200px)                         { #agendaFrame { height: 2400px; } }
-@media (min-width: 1024px) and (max-width: 1199px) { #agendaFrame { height: 2600px; } }
- 
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1023px)  { #agendaFrame { height: 2800px; } }
- 
-/* Mobile — el postMessage ajusta al tamaño exacto.
-   Estos valores son solo el fallback inicial mientras carga Sessionize. */
-@media (max-width: 768px) { #agendaFrame { height: 5000px; } }
-@media (max-width: 480px) { #agendaFrame { height: 5500px; } }
-@media (max-width: 430px) { #agendaFrame { height: 6000px; } }
-@media (max-width: 430px) { #agendaFrame { height: 5500px; } }
-@media (max-width: 390px) { #agendaFrame { height: 6000px; } }
-@media (max-width: 375px) { #agendaFrame { height: 6000px; } }
-@media (max-width: 320px) { #agendaFrame { height: 6500px; } }
+
+@media (min-width: 1024px) and (max-width: 1199px) { #agendaFrame { height: 2800px; } }
+@media (min-width: 769px)  and (max-width: 1023px)  { #agendaFrame { height: 3200px; } }
+@media (max-width: 768px) { #agendaFrame { height: 8000px; } }
+@media (max-width: 480px) { #agendaFrame { height: 9000px; } }
+@media (max-width: 390px) { #agendaFrame { height: 10000px; } }
+@media (max-width: 320px) { #agendaFrame { height: 11000px; } }
  
 /* ================================ */
 /* Footer                           */
