@@ -562,10 +562,12 @@
 						<h2 class="section-title">Agenda</h2>
 					</div>
 
-					<script
-						type="text/javascript"
-						src="https://sessionize.com/api/v2/6gpc0cd3/view/GridSmart"
-					></script>
+					<!-- Este es el código que SÍ funciona en producción -->
+					<div class="sessionize-loader" data-sessionize-load-url="https://sessionize.com/api/v2/6gpc0cd3/view/GridSmart?under=True">
+						<div class="sz-spinner"></div>
+					</div>
+					<script type="text/javascript" src="https://sessionize.com/api/v2/6gpc0cd3/view/GridSmart"></script>
+
 				</div>
 			</section>
 		</main>
