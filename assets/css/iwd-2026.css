@@ -903,28 +903,16 @@ nav {
 /* Agenda Section                   */
 /* ================================ */
 .agenda {
-	width: 100%;
-	/* Mismo azul del header/hero — consistente con el resto del sitio */
-	background-color: var(--blue-primary);
-	padding: 6rem 2rem;
-	border-top: none;
+    width: 100%;
+    background-color: var(--blue-primary);
+    padding: 6rem 2rem 4rem;
+    border-top: none;
 }
  
 .agenda-container { max-width: 1200px; margin: 0 auto; }
  
-/* "04" número translúcido blanco */
 .agenda .section-number { color: var(--white); opacity: 0.15; }
- 
-/* "Agenda" en blanco */
-.agenda .section-title { color: var(--white); }
- 
-.agenda-coming-soon {
-	text-align: center;
-	font-size: 1.5rem;
-	color: var(--green-accent);
-	font-weight: 500;
-	padding: 3rem 0;
-}
+.agenda .section-title  { color: var(--white); }
 
 
 /* ================================ */
@@ -936,21 +924,26 @@ nav {
     border: 0;
     display: block;
     background-color: var(--blue-primary);
-    min-height: 400px; /* nunca colapsa */
-    height: 2400px;    /* fallback desktop */
-    transition: height 0.4s ease;
+    /* Altura inicial conservadora — postMessage la reemplazará */
+    height: 2200px;
+    transition: height 0.3s ease;
 }
-
-@media (min-width: 1024px) and (max-width: 1199px) { #agendaFrame { height: 2800px; } }
-@media (min-width: 769px)  and (max-width: 1023px)  { #agendaFrame { height: 3200px; } }
-@media (max-width: 768px) { #agendaFrame { height: 8000px; } }
-@media (max-width: 480px) { #agendaFrame { height: 9000px; } }
+ 
+/* Fallbacks si postMessage no llega a tiempo */
+@media (min-width: 1200px)                         { #agendaFrame { height: 2200px; } }
+@media (min-width: 1024px) and (max-width: 1199px) { #agendaFrame { height: 2400px; } }
+@media (min-width: 769px)  and (max-width: 1023px) { #agendaFrame { height: 2600px; } }
+/* Mobile: layout vertical, ~15 sesiones × ~170px c/u + separadores */
+@media (max-width: 768px) { #agendaFrame { height: 3800px; } }
 @media (max-width: 480px) { #agendaFrame { height: 4200px; } }
 @media (max-width: 390px) { #agendaFrame { height: 4600px; } }
 @media (max-width: 375px) { #agendaFrame { height: 4800px; } }
 @media (max-width: 320px) { #agendaFrame { height: 5200px; } }
-@media (max-width: 390px) { #agendaFrame { height: 10000px; } }
-@media (max-width: 320px) { #agendaFrame { height: 11000px; } }
+ 
+/* Mobile agenda padding */
+@media (max-width: 768px) {
+    .agenda { padding: 3rem 1rem 2rem; }
+}
  
 /* ================================ */
 /* Footer                           */

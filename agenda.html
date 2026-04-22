@@ -14,13 +14,20 @@
             --blue-accent:   #0847d6;
             --green-accent:  #1CE9B6;
             --green-light:   #7af0d4;
-            --green-dark:    #0bbf94;
             --white:         #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html, body {
+        /* CRÍTICO: html y body con height auto para que el scrollHeight
+           refleje solo el contenido real, no el iframe inflado */
+        html {
+            height: auto;
+            background-color: var(--blue-primary);
+        }
+
+        body {
+            height: auto;
             background-color: var(--blue-primary);
             font-family: 'Outfit', sans-serif;
             color: var(--white);
@@ -32,7 +39,6 @@
             background-color: var(--blue-primary);
             position: relative;
             padding: 2rem 1.5rem 3rem;
-            overflow: hidden;
         }
 
         .px-block {
@@ -50,10 +56,9 @@
             z-index: 1;
         }
 
-        /* ═══════════════════════════════════════════════════
-           SESSIONIZE BASE OVERRIDES
-        ═══════════════════════════════════════════════════ */
-
+        /* ══════════════════════════════════════════
+           SESSIONIZE OVERRIDES
+        ══════════════════════════════════════════ */
         .sz-root, div.sz-root {
             font-family: 'Outfit', sans-serif !important;
             background-color: transparent !important;
@@ -62,7 +67,6 @@
             max-width: 100% !important;
         }
 
-        /* Day heading */
         .sz-root .sz-day--header,
         .sz-root h2,
         .sz-root h3 {
@@ -78,9 +82,6 @@
             text-transform: uppercase !important;
         }
 
-        /* ═══════════════════════════════════════════════════
-           TABLE — DESKTOP GRID (≥ 769px)
-        ═══════════════════════════════════════════════════ */
         .sz-root table {
             width: 100% !important;
             border-collapse: separate !important;
@@ -99,7 +100,7 @@
             font-size: 0.72rem !important;
             letter-spacing: 0.1em !important;
             text-transform: uppercase !important;
-            border: 1px solid rgba(28, 233, 182, 0.3) !important;
+            border: 1px solid rgba(28,233,182,0.3) !important;
             border-radius: 6px !important;
             padding: 0.7rem 0.8rem !important;
             text-align: center !important;
@@ -107,8 +108,7 @@
             word-break: break-word !important;
         }
 
-        .sz-root table td,
-        .sz-root td {
+        .sz-root table td, .sz-root td {
             background-color: transparent !important;
             border: none !important;
             padding: 3px !important;
@@ -116,13 +116,10 @@
             font-family: 'Outfit', sans-serif !important;
         }
 
-        /* Time column */
-        .sz-root td:first-child,
-        .sz-root .sz-timeslot {
+        .sz-root td:first-child, .sz-root .sz-timeslot {
             color: var(--green-accent) !important;
             font-weight: 700 !important;
             font-size: 0.8rem !important;
-            font-family: 'Outfit', sans-serif !important;
             white-space: nowrap !important;
             background-color: transparent !important;
             border: none !important;
@@ -133,15 +130,11 @@
             max-width: 52px !important;
         }
 
-        /* ═══════════════════════════════════════════════════
-           SESSION CARD
-        ═══════════════════════════════════════════════════ */
         .sz-root .sz-session,
         div.sz-root div.sz-session,
         .sz-root .sz-session[class],
         .sz-root td .sz-session {
             background-color: var(--blue-card) !important;
-            background: var(--blue-card) !important;
             border-radius: 8px !important;
             border: none !important;
             border-left: 4px solid var(--green-accent) !important;
@@ -152,28 +145,21 @@
             height: 100% !important;
             transition: background-color 0.18s ease !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
-            outline: none !important;
             overflow: hidden !important;
         }
 
         .sz-root .sz-session:hover,
         div.sz-root div.sz-session:hover {
             background-color: var(--blue-accent) !important;
-            background: var(--blue-accent) !important;
         }
 
-        /* Service sessions */
         .sz-root .sz-session.sz-session--service,
         div.sz-root div.sz-session.sz-session--service {
             background-color: var(--blue-service) !important;
-            background: var(--blue-service) !important;
             border-left: 4px solid var(--green-accent) !important;
             text-align: center !important;
         }
 
-        /* Session title */
-        .sz-root .sz-session .sz-session--title,
-        .sz-root .sz-session .sz-session--title a,
         .sz-root .sz-session--title,
         .sz-root .sz-session--title a,
         div.sz-root .sz-session--title,
@@ -188,10 +174,8 @@
             margin: 0 0 0.2rem 0 !important;
             background: transparent !important;
             word-break: break-word !important;
-            overflow-wrap: break-word !important;
         }
 
-        /* Service title */
         .sz-root .sz-session.sz-session--service .sz-session--title,
         .sz-root .sz-session.sz-session--service .sz-session--title a {
             color: var(--green-accent) !important;
@@ -199,8 +183,6 @@
             font-size: 1rem !important;
         }
 
-        /* Room badge */
-        .sz-root .sz-session .sz-session--room,
         .sz-root .sz-session--room,
         div.sz-root .sz-session--room {
             display: inline-block !important;
@@ -210,103 +192,68 @@
             letter-spacing: 0.09em !important;
             text-transform: uppercase !important;
             background-color: var(--green-accent) !important;
-            background: var(--green-accent) !important;
             color: var(--blue-dark) !important;
             border-radius: 3px !important;
             padding: 0.12rem 0.45rem !important;
             margin-bottom: 0.35rem !important;
             border: none !important;
-            white-space: normal !important;
             word-break: break-word !important;
             max-width: 100% !important;
         }
 
-        /* Time badge inside card */
-        .sz-root .sz-session .sz-session--time,
         .sz-root .sz-session--time {
             font-family: 'Outfit', sans-serif !important;
             font-size: 0.68rem !important;
-            font-weight: 400 !important;
             color: var(--green-light) !important;
             display: block !important;
             margin-bottom: 0.15rem !important;
-            background: transparent !important;
         }
 
-        /* Speaker names */
-        .sz-root .sz-session .sz-session--speakers,
-        .sz-root .sz-session .sz-session--speakers a,
-        .sz-root .sz-session .sz-session--speakers span,
         .sz-root .sz-session--speakers,
-        .sz-root .sz-session--speakers a {
+        .sz-root .sz-session--speakers a,
+        .sz-root .sz-session--speakers span {
             font-family: 'Outfit', sans-serif !important;
             font-size: 0.8rem !important;
-            font-weight: 400 !important;
             color: var(--green-light) !important;
             text-decoration: none !important;
             display: block !important;
-            background: transparent !important;
             margin-top: 0.3rem !important;
             word-break: break-word !important;
         }
 
-        /* Description */
-        .sz-root .sz-session .sz-session--description,
         .sz-root .sz-session--description {
-            font-family: 'Outfit', sans-serif !important;
             font-size: 0.78rem !important;
             font-weight: 300 !important;
             line-height: 1.5 !important;
             color: rgba(255,255,255,0.7) !important;
             margin-top: 0.2rem !important;
-            background: transparent !important;
         }
 
-        /* Speaker photo */
-        .sz-root .sz-speaker--photo,
-        .sz-root .sz-avatar {
+        .sz-root .sz-speaker--photo, .sz-root .sz-avatar {
             border: 2px solid var(--green-accent) !important;
             border-radius: 50% !important;
         }
 
-        /* Powered by */
         .sz-root .sz-powered-by,
         .sz-root a[href*="sessionize"] {
-            font-family: 'Outfit', sans-serif !important;
             font-size: 0.65rem !important;
-            color: rgba(122, 240, 212, 0.4) !important;
+            color: rgba(122,240,212,0.4) !important;
             text-align: center !important;
             display: block !important;
             margin-top: 2rem !important;
         }
 
-        /* All links */
-        .sz-root a {
-            color: var(--green-accent) !important;
-            text-decoration: none !important;
-        }
+        .sz-root a { color: var(--green-accent) !important; text-decoration: none !important; }
         .sz-root a:hover { color: var(--green-light) !important; }
+        .sz-spinner { border-top-color: var(--green-accent) !important; margin: 80px auto !important; }
 
-        /* Spinner */
-        .sz-spinner {
-            border-top-color: var(--green-accent) !important;
-            margin: 80px auto !important;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           MOBILE OVERRIDES — ≤ 768px
-           Fuerza layout de lista vertical, elimina el grid
-           de columnas que Sessionize usa en desktop.
-        ═══════════════════════════════════════════════════ */
+        /* ══════════════════════════════════════════
+           MOBILE ≤ 768px — columnas → lista vertical
+        ══════════════════════════════════════════ */
         @media (max-width: 768px) {
-            .agenda-page {
-                padding: 1rem 0.75rem 2rem;
-            }
-
-            /* Ocultar deco lateral en mobile para no confundir */
+            .agenda-page { padding: 1rem 0.75rem 2rem; }
             .px-block { display: none; }
 
-            /* ── Tabla: convertir en bloques verticales ── */
             .sz-root table,
             .sz-root table thead,
             .sz-root table tbody,
@@ -320,62 +267,43 @@
                 padding: 0 !important;
             }
 
-            /* Ocultar fila de headers de columna (nombres de salas en th) */
             .sz-root table thead,
-            .sz-root table tr:first-child th,
-            .sz-root thead tr {
-                display: none !important;
-            }
+            .sz-root thead tr { display: none !important; }
 
-            /* Cada fila de tiempo = sección */
-            .sz-root table tr {
-                margin-bottom: 0 !important;
-            }
+            .sz-root table tr { margin-bottom: 0 !important; }
 
-            /* Celda de tiempo: mostrar como etiqueta de hora */
-            .sz-root td:first-child,
-            .sz-root .sz-timeslot {
+            .sz-root td:first-child, .sz-root .sz-timeslot {
                 width: 100% !important;
                 min-width: 0 !important;
                 max-width: 100% !important;
                 display: block !important;
-                padding: 0.6rem 0 0.3rem !important;
-                font-size: 0.75rem !important;
-                font-weight: 700 !important;
+                padding: 0.7rem 0 0.3rem !important;
+                font-size: 0.8rem !important;
+                font-weight: 800 !important;
                 color: var(--green-accent) !important;
-                letter-spacing: 0.08em !important;
-                border-top: 1px solid rgba(28,233,182,0.18) !important;
-                margin-top: 0.5rem !important;
+                letter-spacing: 0.1em !important;
+                border-top: 1px solid rgba(28,233,182,0.2) !important;
+                margin-top: 0.6rem !important;
+                text-transform: uppercase !important;
+                white-space: normal !important;
             }
 
-            /* Celdas de sesiones */
-            .sz-root table td {
-                padding: 0 0 6px 0 !important;
-                width: 100% !important;
-            }
+            .sz-root table td { padding: 0 0 6px 0 !important; width: 100% !important; }
 
-            /* Cards full-width en mobile */
             .sz-root .sz-session,
             div.sz-root div.sz-session {
                 border-radius: 10px !important;
                 padding: 0.85rem 1rem !important;
                 margin-bottom: 0 !important;
-                border-left: 4px solid var(--green-accent) !important;
                 box-shadow: 0 3px 12px rgba(0,0,0,0.25) !important;
             }
 
-            /* Mostrar la sala como badge dentro del card */
-            .sz-root .sz-session .sz-session--room,
             .sz-root .sz-session--room {
                 font-size: 0.6rem !important;
                 padding: 0.15rem 0.5rem !important;
                 margin-bottom: 0.4rem !important;
-                display: inline-block !important;
             }
 
-            /* Título más grande y legible en mobile */
-            .sz-root .sz-session .sz-session--title,
-            .sz-root .sz-session .sz-session--title a,
             .sz-root .sz-session--title,
             .sz-root .sz-session--title a {
                 font-size: 0.95rem !important;
@@ -383,58 +311,35 @@
                 font-weight: 700 !important;
             }
 
-            /* Service title */
             .sz-root .sz-session.sz-session--service .sz-session--title,
             .sz-root .sz-session.sz-session--service .sz-session--title a {
                 font-size: 1rem !important;
             }
 
-            /* Speaker */
-            .sz-root .sz-session .sz-session--speakers,
-            .sz-root .sz-session .sz-session--speakers a {
+            .sz-root .sz-session--speakers,
+            .sz-root .sz-session--speakers a {
                 font-size: 0.82rem !important;
-                color: var(--green-light) !important;
                 margin-top: 0.35rem !important;
             }
 
-            /* Time badge */
-            .sz-root .sz-session .sz-session--time,
-            .sz-root .sz-session--time {
-                font-size: 0.7rem !important;
-            }
+            .sz-root .sz-timeslot--empty { display: none !important; }
 
-            /* Day heading */
-            .sz-root .sz-day--header,
-            .sz-root h2 {
+            .sz-root .sz-day--header, .sz-root h2 {
                 font-size: 1.1rem !important;
                 padding: 0 0 1rem !important;
-                letter-spacing: 0.06em !important;
-            }
-
-            /* Ocultar la columna del tiempo si Sessionize la repite */
-            .sz-root .sz-timeslot--empty {
-                display: none !important;
             }
         }
 
-        /* ── Very small screens ── */
         @media (max-width: 380px) {
-            .sz-root .sz-session .sz-session--title,
-            .sz-root .sz-session .sz-session--title a,
             .sz-root .sz-session--title,
-            .sz-root .sz-session--title a {
-                font-size: 0.88rem !important;
-            }
+            .sz-root .sz-session--title a { font-size: 0.88rem !important; }
             .sz-root .sz-session,
-            div.sz-root div.sz-session {
-                padding: 0.7rem 0.85rem !important;
-            }
+            div.sz-root div.sz-session { padding: 0.7rem 0.85rem !important; }
         }
 
-        /* ── Tablets ── */
         @media (min-width: 769px) and (max-width: 1024px) {
             .sz-root table th { font-size: 0.65rem !important; padding: 0.5rem 0.4rem !important; }
-            .sz-root .sz-session .sz-session--title,
+            .sz-root .sz-session--title,
             .sz-root .sz-session--title a { font-size: 0.82rem !important; }
             .sz-root .sz-session { padding: 0.6rem 0.7rem !important; }
         }
@@ -443,7 +348,7 @@
 <body>
 <div class="agenda-page">
 
-    <!-- Pixel deco — only visible on desktop -->
+    <!-- Pixel deco desktop only -->
     <div class="px-block" style="top:14px;left:14px;width:32px;height:32px;"></div>
     <div class="px-block" style="top:52px;left:14px;width:22px;height:22px;"></div>
     <div class="px-block" style="top:14px;left:52px;width:32px;height:32px;"></div>
@@ -451,13 +356,8 @@
     <div class="px-block" style="top:14px;right:14px;width:22px;height:22px;"></div>
     <div class="px-block" style="top:42px;right:14px;width:32px;height:32px;"></div>
     <div class="px-block" style="top:14px;right:42px;width:22px;height:22px;"></div>
-    <div class="px-block" style="top:80px;right:14px;width:14px;height:14px;opacity:0.06;"></div>
     <div class="px-block" style="bottom:14px;right:14px;width:32px;height:32px;"></div>
-    <div class="px-block" style="bottom:52px;right:14px;width:22px;height:22px;"></div>
-    <div class="px-block" style="bottom:14px;right:52px;width:22px;height:22px;"></div>
     <div class="px-block" style="bottom:14px;left:14px;width:22px;height:22px;"></div>
-    <div class="px-block" style="bottom:42px;left:14px;width:14px;height:14px;"></div>
-    <div class="px-block" style="bottom:14px;left:38px;width:14px;height:14px;"></div>
 
     <div class="agenda-inner">
         <script type="text/javascript"
@@ -465,61 +365,37 @@
     </div>
 
     <script>
-        var lastH = 0;
-        var observer = null;
-
-        function getFullHeight() {
-            // scrollHeight da la altura TOTAL del contenido, incluso lo no visible
-            var body = document.body;
-            var html = document.documentElement;
-            return Math.max(
-                body.scrollHeight,
-                body.offsetHeight,
-                html.scrollHeight,
-                html.offsetHeight
-            ) + 32; // margen de seguridad
-        }
-
-        function sendHeight() {
-            var h = getFullHeight();
-            if (h > 200 && h !== lastH) {
-                lastH = h;
-                if (window.parent !== window) {
-                    window.parent.postMessage({ agendaHeight: h }, '*');
-                }
+        // CLAVE: medir el .agenda-page directamente (el contenedor real),
+        // no el documento (que puede estar inflado por el iframe padre).
+        function notifyHeight() {
+            var page = document.querySelector('.agenda-page');
+            if (!page) return;
+            var h = page.offsetHeight;
+            if (h > 100 && window.parent !== window) {
+                window.parent.postMessage({ agendaHeight: h }, '*');
             }
         }
 
-        // Disparar en múltiples momentos — Sessionize puede tardar hasta 10s en mobile
-        var intervals = [100, 300, 700, 1500, 3000, 5000, 8000, 12000, 16000];
-        intervals.forEach(function(ms) {
-            setTimeout(sendHeight, ms);
-        });
-
-        window.addEventListener('load', function() {
-            sendHeight();
-            // Seguir intentando cada 2s hasta que el contenido sea estable
-            var attempts = 0;
-            var poller = setInterval(function() {
-                sendHeight();
-                attempts++;
-                if (attempts >= 15) clearInterval(poller);
-            }, 2000);
-        });
-
-        // ResizeObserver — más confiable que MutationObserver para cambios de tamaño
-        if (window.ResizeObserver) {
-            var ro = new ResizeObserver(function() {
-                setTimeout(sendHeight, 100);
+        // Sessionize inyecta su HTML de forma asíncrona — necesitamos
+        // esperar hasta que termine. Lanzamos en múltiples momentos.
+        window.addEventListener('load', function () {
+            [300, 800, 1500, 2500, 4000, 6000].forEach(function(ms) {
+                setTimeout(notifyHeight, ms);
             });
-            ro.observe(document.body);
-        }
-
-        // MutationObserver como fallback
-        var mo = new MutationObserver(function() {
-            setTimeout(sendHeight, 300);
         });
-        mo.observe(document.body, { childList: true, subtree: true, attributes: true });
+
+        // MutationObserver para detectar cuando Sessionize termina de inyectar
+        var settled = false;
+        var mo = new MutationObserver(function() {
+            clearTimeout(window._moTimer);
+            window._moTimer = setTimeout(function() {
+                notifyHeight();
+                // Seguir midiendo un poco más por si carga imágenes/fonts
+                setTimeout(notifyHeight, 500);
+                setTimeout(notifyHeight, 1500);
+            }, 200);
+        });
+        mo.observe(document.body, { childList: true, subtree: true });
     </script>
 </div>
 </body>
