@@ -19,8 +19,6 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* CRÍTICO: html y body con height auto para que el scrollHeight
-           refleje solo el contenido real, no el iframe inflado */
         html {
             height: auto;
             background-color: var(--blue-primary);
@@ -56,20 +54,21 @@
             z-index: 1;
         }
 
-        /* ══════════════════════════════════════════
-           SESSIONIZE OVERRIDES
-        ══════════════════════════════════════════ */
-        .sz-root, div.sz-root {
+        /* ══════════════════════════════════════════════
+        SESSIONIZE — selectores reales del HTML
+        Basados en .sz-cssgrid (estructura real)
+        ══════════════════════════════════════════════ */
+
+        /* Contenedor raíz */
+        .sz-cssgrid {
+            background: transparent !important;
             font-family: 'Outfit', sans-serif !important;
-            background-color: transparent !important;
             color: var(--white) !important;
             width: 100% !important;
-            max-width: 100% !important;
         }
 
-        .sz-root .sz-day--header,
-        .sz-root h2,
-        .sz-root h3 {
+        /* Título del día (Sat, 4/25/2026) */
+        .sz-cssgrid h2 {
             font-family: 'Outfit', sans-serif !important;
             font-weight: 800 !important;
             font-size: 1.4rem !important;
@@ -77,25 +76,15 @@
             text-align: center !important;
             padding: 0.25rem 0 1.5rem !important;
             background: transparent !important;
-            border: none !important;
             letter-spacing: 0.04em !important;
             text-transform: uppercase !important;
         }
 
-        .sz-root table {
-            width: 100% !important;
-            border-collapse: separate !important;
-            border-spacing: 5px !important;
-            background: transparent !important;
-            table-layout: fixed !important;
-        }
-
-        .sz-root table th,
-        .sz-root th,
-        .sz-root .sz-room--header {
-            font-family: 'Outfit', sans-serif !important;
+        /* Headers de sala (columnas) */
+        .sz-cssgrid__track-label {
             background-color: var(--blue-dark) !important;
             color: var(--green-accent) !important;
+            font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
             font-size: 0.72rem !important;
             letter-spacing: 0.1em !important;
@@ -104,97 +93,58 @@
             border-radius: 6px !important;
             padding: 0.7rem 0.8rem !important;
             text-align: center !important;
-            vertical-align: middle !important;
-            word-break: break-word !important;
         }
 
-        .sz-root table td, .sz-root td {
-            background-color: transparent !important;
-            border: none !important;
-            padding: 3px !important;
-            vertical-align: top !important;
-            font-family: 'Outfit', sans-serif !important;
-        }
-
-        .sz-root td:first-child, .sz-root .sz-timeslot {
+        /* Etiquetas de hora */
+        .sz-cssgrid__time-label {
             color: var(--green-accent) !important;
+            font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
             font-size: 0.8rem !important;
-            white-space: nowrap !important;
-            background-color: transparent !important;
-            border: none !important;
-            padding-right: 8px !important;
-            vertical-align: top !important;
-            width: 52px !important;
-            min-width: 52px !important;
-            max-width: 52px !important;
+            background: transparent !important;
         }
 
-        .sz-root .sz-session,
-        div.sz-root div.sz-session,
-        .sz-root .sz-session[class],
-        .sz-root td .sz-session {
+        /* ── CARD normal — VERDE con texto AZUL OSCURO ── */
+        .sz-cssgrid .sz-session__card {
+            background: var(--green-accent) !important;
             background-color: var(--green-accent) !important;
             border-radius: 8px !important;
             border: none !important;
             border-left: 4px solid var(--blue-dark) !important;
             padding: 0.75rem 0.9rem !important;
-            color: var(--blue-dark) !important;
-            font-family: 'Outfit', sans-serif !important;
-            display: block !important;
-            height: 100% !important;
-            transition: background-color 0.18s ease !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
             overflow: hidden !important;
+            transition: background 0.18s ease !important;
         }
 
-        .sz-root .sz-session:hover,
-        div.sz-root div.sz-session:hover {
+        .sz-cssgrid .sz-session__card:hover {
+            background: var(--green-light) !important;
             background-color: var(--green-light) !important;
         }
 
-        /* Sesiones de servicio (Registro, Almuerzo, Cierre) — azul oscuro */
-        .sz-root .sz-session.sz-session--service,
-        div.sz-root div.sz-session.sz-session--service {
+        /* ── CARD de servicio (Registro, Almuerzo, Cierre) — AZUL OSCURO ── */
+        .sz-cssgrid .sz-session--service .sz-session__card {
+            background: var(--blue-dark) !important;
             background-color: var(--blue-dark) !important;
             border-left: 4px solid var(--green-accent) !important;
             text-align: center !important;
         }
 
-        /* Título de sesión — azul oscuro bold */
-        .sz-root .sz-session--title,
-        .sz-root .sz-session--title a,
-        div.sz-root .sz-session--title,
-        div.sz-root .sz-session--title a {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 0.9rem !important;
-            line-height: 1.4 !important;
-            color: var(--blue-dark) !important;
-            text-decoration: none !important;
-            display: block !important;
-            margin: 0 0 0.2rem 0 !important;
-            word-break: break-word !important;
+        .sz-cssgrid .sz-session--service .sz-session__card:hover {
+            background: var(--blue-primary) !important;
+            background-color: var(--blue-primary) !important;
         }
 
-        /* Título de servicio — verde sobre fondo oscuro */
-        .sz-root .sz-session.sz-session--service .sz-session--title,
-        .sz-root .sz-session.sz-session--service .sz-session--title a {
-            color: var(--green-accent) !important;
-            font-weight: 700 !important;
-            font-size: 1rem !important;
-        }
-
-        /* Badge de sala — azul oscuro sobre fondo verde */
-        .sz-root .sz-session--room,
-        div.sz-root .sz-session--room {
+        /* ── Badge de sala ── */
+        .sz-cssgrid .sz-session__card .sz-session__room {
             display: inline-block !important;
+            background-color: var(--blue-dark) !important;
+            color: var(--green-accent) !important;
+            font-family: 'Outfit', sans-serif !important;
             font-size: 0.58rem !important;
             font-weight: 700 !important;
             letter-spacing: 0.09em !important;
             text-transform: uppercase !important;
-            background-color: var(--blue-dark) !important;
-            color: var(--green-accent) !important;
             border-radius: 3px !important;
             padding: 0.12rem 0.45rem !important;
             margin-bottom: 0.35rem !important;
@@ -202,196 +152,164 @@
             word-break: break-word !important;
             max-width: 100% !important;
         }
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card {
-            background: rgb(28, 233, 182) !important;        /* verde --green-accent */
-            background-color: rgb(28, 233, 182) !important;
-            color: rgb(2, 29, 110) !important;               /* azul oscuro --blue-dark */
-            border-top: none !important;
-            border-left: 4px solid rgb(2, 29, 110) !important;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
-            border-radius: 8px !important;
+
+        .sz-cssgrid .sz-session--service .sz-session__card .sz-session__room {
+            background-color: var(--green-accent) !important;
+            color: var(--blue-dark) !important;
         }
 
-        /* Título dentro del card */
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--title,
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--title a {
-            color: rgb(2, 29, 110) !important;
-            font-weight: 700 !important;
-        }
-
-        /* Speaker */
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--speakers,
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--speakers a {
-            color: rgb(3, 52, 171) !important;
-        }
-
-        /* Badge de sala */
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--room {
-            background-color: rgb(2, 29, 110) !important;
-            color: rgb(28, 233, 182) !important;
-        }
-
-        /* Hora */
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card .sz-session--time {
-            color: rgb(3, 52, 171) !important;
-        }
-
-        /* Sesiones de servicio (Registro, Almuerzo, Cierre) — mantener azul oscuro */
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service {
-            background: rgb(2, 29, 110) !important;
-            background-color: rgb(2, 29, 110) !important;
-            border-left: 4px solid rgb(28, 233, 182) !important;
-        }
-
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service .sz-session--title,
-        #sessionize.sessionize-wrapper .sz-cssgrid .sz-session_card.sz-session--service .sz-session--title a {
-            color: rgb(28, 233, 182) !important;
-        }
-
-        /* Hora dentro del card */
-        .sz-root .sz-session--time {
+        /* ── Hora ── */
+        .sz-cssgrid .sz-session__card .sz-session__time {
+            font-family: 'Outfit', sans-serif !important;
             font-size: 0.68rem !important;
             color: var(--blue-primary) !important;
             display: block !important;
             margin-bottom: 0.15rem !important;
+            opacity: 1 !important;
+            background: transparent !important;
         }
 
-        /* Nombre del speaker */
-        .sz-root .sz-session--speakers,
-        .sz-root .sz-session--speakers a,
-        .sz-root .sz-session--speakers span {
+        .sz-cssgrid .sz-session--service .sz-session__card .sz-session__time {
+            color: rgba(122, 240, 212, 0.8) !important;
+        }
+
+        /* ── Título ── */
+        .sz-cssgrid .sz-session__card .sz-session__title,
+        .sz-cssgrid .sz-session__card .sz-session__title a {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.9rem !important;
+            line-height: 1.4 !important;
+            color: var(--blue-dark) !important;
+            text-decoration: none !important;
+            display: block !important;
+            word-break: break-word !important;
+            background: transparent !important;
+        }
+
+        .sz-cssgrid .sz-session--service .sz-session__card .sz-session__title,
+        .sz-cssgrid .sz-session--service .sz-session__card .sz-session__title a {
+            color: var(--green-accent) !important;
+            font-size: 1rem !important;
+        }
+
+        /* ── Speakers ── */
+        .sz-cssgrid .sz-session__card .sz-session__speakers,
+        .sz-cssgrid .sz-session__card .sz-session__speakers li,
+        .sz-cssgrid .sz-session__card .sz-session__speakers a {
+            font-family: 'Outfit', sans-serif !important;
             font-size: 0.8rem !important;
             font-weight: 600 !important;
             color: var(--blue-primary) !important;
             text-decoration: none !important;
-            display: block !important;
+            list-style: none !important;
             margin-top: 0.3rem !important;
-            word-break: break-word !important;
+            background: transparent !important;
         }
 
-        /* Descripción */
-        .sz-root .sz-session--description {
-            font-size: 0.78rem !important;
-            font-weight: 300 !important;
-            line-height: 1.5 !important;
-            color: var(--blue-dark) !important;
-            opacity: 0.75;
-            margin-top: 0.2rem !important;
+        .sz-cssgrid .sz-session--service .sz-session__card .sz-session__speakers a {
+            color: rgba(122, 240, 212, 0.8) !important;
         }
 
-        .sz-root .sz-speaker--photo, .sz-root .sz-avatar {
-            border: 2px solid var(--green-accent) !important;
-            border-radius: 50% !important;
-        }
-
-        .sz-root .sz-powered-by,
-        .sz-root a[href*="sessionize"] {
-            font-size: 0.65rem !important;
+        /* ── Powered by ── */
+        .sz-powered-by,
+        a[href*="sessionize.com"] {
             color: rgba(122,240,212,0.4) !important;
+            font-size: 0.65rem !important;
             text-align: center !important;
             display: block !important;
             margin-top: 2rem !important;
         }
 
-        .sz-root a { color: var(--green-accent) !important; text-decoration: none !important; }
-        .sz-root a:hover { color: var(--green-light) !important; }
-        .sz-spinner { border-top-color: var(--green-accent) !important; margin: 80px auto !important; }
-
-        /* ══════════════════════════════════════════
-           MOBILE ≤ 768px — columnas → lista vertical
-        ══════════════════════════════════════════ */
+        /* ══════════════════════════════════════════════
+        MOBILE ≤ 768px
+        ══════════════════════════════════════════════ */
         @media (max-width: 768px) {
             .agenda-page { padding: 1rem 0.75rem 2rem; }
             .px-block { display: none; }
 
-            .sz-root table,
-            .sz-root table thead,
-            .sz-root table tbody,
-            .sz-root table tr,
-            .sz-root table td,
-            .sz-root table th {
+            /* Convertir grid en lista vertical */
+            .sz-cssgrid {
                 display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                border-spacing: 0 !important;
-                padding: 0 !important;
             }
 
-            .sz-root table thead,
-            .sz-root thead tr { display: none !important; }
+            .sz-cssgrid__track-label {
+                display: none !important;
+            }
 
-            .sz-root table tr { margin-bottom: 0 !important; }
-
-            .sz-root td:first-child, .sz-root .sz-timeslot {
-                width: 100% !important;
-                min-width: 0 !important;
-                max-width: 100% !important;
+            .sz-cssgrid__time-label {
                 display: block !important;
                 padding: 0.7rem 0 0.3rem !important;
                 font-size: 0.8rem !important;
                 font-weight: 800 !important;
-                color: var(--green-accent) !important;
                 letter-spacing: 0.1em !important;
                 border-top: 1px solid rgba(28,233,182,0.2) !important;
                 margin-top: 0.6rem !important;
                 text-transform: uppercase !important;
-                white-space: normal !important;
+                grid-column: unset !important;
+                grid-row: unset !important;
             }
 
-            .sz-root table td { padding: 0 0 6px 0 !important; width: 100% !important; }
+            .sz-cssgrid .sz-session {
+                display: block !important;
+                grid-column: unset !important;
+                grid-row: unset !important;
+                margin-bottom: 6px !important;
+                width: 100% !important;
+            }
 
-            .sz-root .sz-session,
-            div.sz-root div.sz-session {
+            .sz-cssgrid .sz-session__card {
                 border-radius: 10px !important;
                 padding: 0.85rem 1rem !important;
-                margin-bottom: 0 !important;
                 box-shadow: 0 3px 12px rgba(0,0,0,0.25) !important;
             }
 
-            .sz-root .sz-session--room {
+            .sz-cssgrid .sz-session__card .sz-session__room {
                 font-size: 0.6rem !important;
                 padding: 0.15rem 0.5rem !important;
                 margin-bottom: 0.4rem !important;
             }
 
-            .sz-root .sz-session--title,
-            .sz-root .sz-session--title a {
+            .sz-cssgrid .sz-session__card .sz-session__title,
+            .sz-cssgrid .sz-session__card .sz-session__title a {
                 font-size: 0.95rem !important;
                 line-height: 1.35 !important;
-                font-weight: 700 !important;
             }
 
-            .sz-root .sz-session.sz-session--service .sz-session--title,
-            .sz-root .sz-session.sz-session--service .sz-session--title a {
-                font-size: 1rem !important;
-            }
-
-            .sz-root .sz-session--speakers,
-            .sz-root .sz-session--speakers a {
+            .sz-cssgrid .sz-session__card .sz-session__speakers,
+            .sz-cssgrid .sz-session__card .sz-session__speakers a {
                 font-size: 0.82rem !important;
                 margin-top: 0.35rem !important;
             }
 
-            .sz-root .sz-timeslot--empty { display: none !important; }
-
-            .sz-root .sz-day--header, .sz-root h2 {
+            .sz-cssgrid h2 {
                 font-size: 1.1rem !important;
                 padding: 0 0 1rem !important;
             }
         }
 
         @media (max-width: 380px) {
-            .sz-root .sz-session--title,
-            .sz-root .sz-session--title a { font-size: 0.88rem !important; }
-            .sz-root .sz-session,
-            div.sz-root div.sz-session { padding: 0.7rem 0.85rem !important; }
+            .sz-cssgrid .sz-session__card .sz-session__title,
+            .sz-cssgrid .sz-session__card .sz-session__title a {
+                font-size: 0.88rem !important;
+            }
+            .sz-cssgrid .sz-session__card {
+                padding: 0.7rem 0.85rem !important;
+            }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-            .sz-root table th { font-size: 0.65rem !important; padding: 0.5rem 0.4rem !important; }
-            .sz-root .sz-session--title,
-            .sz-root .sz-session--title a { font-size: 0.82rem !important; }
-            .sz-root .sz-session { padding: 0.6rem 0.7rem !important; }
+            .sz-cssgrid__track-label {
+                font-size: 0.65rem !important;
+                padding: 0.5rem 0.4rem !important;
+            }
+            .sz-cssgrid .sz-session__card .sz-session__title,
+            .sz-cssgrid .sz-session__card .sz-session__title a {
+                font-size: 0.82rem !important;
+            }
+            .sz-cssgrid .sz-session__card {
+                padding: 0.6rem 0.7rem !important;
+            }
         }
     </style>
 </head>
