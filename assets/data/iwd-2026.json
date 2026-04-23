@@ -159,6 +159,12 @@
 				"showName": true
 			},
 			{
+				"name": "Juntas Comunidad",
+				"image": "./assets/images/communities/juntas.png",
+				"url": "https://www.instagram.com/juntascomunidad/",
+				"showName": true
+			},
+			{
 				"name": "Women Techmakers Technovation",
 				"image": "./assets/images/communities/Women Techmakers Technovation.png",
 				"url": "https://www.linkedin.com/company/womentechmakers/",
