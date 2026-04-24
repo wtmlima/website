@@ -96,6 +96,18 @@
 			"image": "./assets/images/ambassadors/wendy-morales.jpg",
 			"role": "WTM Ambassador",
 			"linkedin": "https://www.linkedin.com/in/wmoralesy"
+		},
+		{
+			"name": "Mirina Gonzales",
+			"image": "./assets/images/ambassadors/mirina-gonzales.jpg",
+			"role": "GDG Arequipa",
+			"linkedin": "https://www.linkedin.com/in/mirina-gonzales-rodriguez/"
+		},
+		{
+			"name": "Geraldin Santos",
+			"image": "./assets/images/ambassadors/geraldin_santos.png",
+			"role": "WTM Ambassador",
+			"linkedin": "https://www.linkedin.com/in/geraldinsantos/"
 		}
 	],
 	"sponsors": {
