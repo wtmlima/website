@@ -169,12 +169,6 @@
 				"image": "./assets/images/communities/Women Techmakers Technovation.png",
 				"url": "https://www.linkedin.com/company/womentechmakers/",
 				"showName": true
-			},
-			{
-				"name": "Mitocode",
-				"image": "./assets/images/communities/mitocode.png",
-				"url": "https://www.instagram.com/mitocode",
-				"showName": true
 			}
 		],
 		"carol-shaw": []
