@@ -166,19 +166,19 @@
 			},
 			{
 				"name": "Girls Up Perú",
-				"image": "./assets/images/communities/girls-up-peru.png",
+				"image": "./assets/images/communities/girl_up_peru.png",
 				"url": "https://www.instagram.com/girlupperu/",
 				"showName": true
 			},
 			{
 				"name": "Evolving Hub",
-				"image": "./assets/images/communities/evolving-hub.png",
+				"image": "./assets/images/communities/evolving_hub.png",
 				"url": "https://www.instagram.com/evolving_hub/",
 				"showName": true
 			},
 			{
 				"name": "AWS Girls Perú",
-				"image": "./assets/images/communities/aws-girls-peru.png",
+				"image": "./assets/images/communities/aws_girls_peru.png",
 				"url": "https://www.instagram.com/awsgirlsperu/",
 				"showName": true
 			},
@@ -190,13 +190,13 @@
 			},
 			{
 				"name": "STEM Futuras",
-				"image": "./assets/images/communities/stem-futuras.png",
+				"image": "./assets/images/communities/stem_futuras.png",
 				"url": "https://www.instagram.com/stemfuturas/",
 				"showName": true
 			},
 			{
 				"name": "WIE IEEE UTEC",
-				"image": "./assets/images/communities/ieee_utec.png",
+				"image": "./assets/images/communities/wie_iee_utec.png",
 				"url": "https://www.instagram.com/wie_utec/",
 				"showName": true
 			},
